@@ -1,8 +1,13 @@
+"use client";
+
+import { useLanguage } from "@/components/providers/language-provider";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 
 export function CTASection() {
+  const { copy } = useLanguage();
+
   return (
     <section id="contact" className="section-padding relative pt-10">
       <Container>
@@ -12,27 +17,25 @@ export function CTASection() {
             <div className="absolute right-[-120px] top-[-120px] h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(179,58,91,0.36),transparent_68%)]" />
             <div className="relative z-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
               <div>
-                <p className="section-label text-white/62">Call To Action</p>
+                <p className="section-label text-white/62">{copy.cta.eyebrow}</p>
                 <h2 className="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-white sm:text-5xl">
-                  Move Freight Smarter
+                  {copy.cta.title}
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
-                  PRIORITY is built for businesses that want more than forwarding.
-                  It is for teams that expect technology, intelligence and
-                  premium operational execution.
+                  {copy.cta.description}
                 </p>
               </div>
 
               <div className="flex flex-col gap-4 sm:flex-row lg:flex-col">
                 <Button href="mailto:hello@priorityfi.com" className="min-w-[220px]">
-                  Request a Quote
+                  {copy.cta.primary}
                 </Button>
                 <Button
                   href="#home"
                   variant="secondary"
                   className="min-w-[220px]"
                 >
-                  Back to Top
+                  {copy.cta.secondary}
                 </Button>
               </div>
             </div>
@@ -42,4 +45,3 @@ export function CTASection() {
     </section>
   );
 }
-

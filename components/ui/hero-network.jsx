@@ -2,30 +2,32 @@
 
 import { motion } from "framer-motion";
 
+import { useLanguage } from "@/components/providers/language-provider";
 import { TransportIcon } from "@/components/ui/transport-icon";
 
-const modeCards = [
-  {
-    label: "Ocean Freight",
-    mode: "ocean",
-    className: "left-4 top-10 md:left-0 md:top-16",
-    delay: 0.2,
-  },
-  {
-    label: "Air Freight",
-    mode: "air",
-    className: "right-4 top-8 md:right-0 md:top-10",
-    delay: 0.45,
-  },
-  {
-    label: "Ground Transportation",
-    mode: "ground",
-    className: "bottom-8 right-10 md:bottom-10 md:right-8",
-    delay: 0.7,
-  },
-];
-
 export function HeroNetwork() {
+  const { copy } = useLanguage();
+  const modeCards = [
+    {
+      label: copy.modes.items[0].title,
+      mode: "ocean",
+      className: "left-4 top-10 md:left-0 md:top-16",
+      delay: 0.2,
+    },
+    {
+      label: copy.modes.items[1].title,
+      mode: "air",
+      className: "right-4 top-8 md:right-0 md:top-10",
+      delay: 0.45,
+    },
+    {
+      label: copy.modes.items[2].title,
+      mode: "ground",
+      className: "bottom-8 right-10 md:bottom-10 md:right-8",
+      delay: 0.7,
+    },
+  ];
+
   return (
     <div className="relative mx-auto flex aspect-[1.08] w-full max-w-[560px] items-center justify-center overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(13,31,60,0.96),rgba(8,20,40,0.98))] p-8 shadow-[0_40px_100px_rgba(4,10,22,0.45)]">
       <div className="absolute inset-0 bg-brand-grid opacity-50" />
@@ -166,7 +168,7 @@ export function HeroNetwork() {
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.24em] text-white/55">
-                Network Layer
+                {copy.header.networkLayer}
               </p>
               <p className="text-sm font-medium text-white/92">{card.label}</p>
             </div>

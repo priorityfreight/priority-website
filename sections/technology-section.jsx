@@ -1,35 +1,36 @@
+"use client";
+
+import { useLanguage } from "@/components/providers/language-provider";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 
-const blocks = [
-  {
-    title: "Data Intelligence",
-    body: "Turn rate signals, routing constraints and shipment context into more informed decisions.",
-    accent: "from-[#800020]/20 to-transparent",
-  },
-  {
-    title: "Operational Systems",
-    body: "Bring structure to execution with shared workflows that support consistency across teams and shipments.",
-    accent: "from-[#0B1F3B]/12 to-transparent",
-  },
-  {
-    title: "Visibility Platforms",
-    body: "Create a more transparent logistics experience with milestone awareness and exception-oriented oversight.",
-    accent: "from-[#909EAE]/20 to-transparent",
-  },
-];
-
 export function TechnologySection() {
+  const { copy } = useLanguage();
+  const blocks = [
+    {
+      ...copy.technology.blocks[0],
+      accent: "from-[#800020]/20 to-transparent",
+    },
+    {
+      ...copy.technology.blocks[1],
+      accent: "from-[#0B1F3B]/12 to-transparent",
+    },
+    {
+      ...copy.technology.blocks[2],
+      accent: "from-[#909EAE]/20 to-transparent",
+    },
+  ];
+
   return (
     <section id="technology" className="section-padding relative">
       <Container>
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)]">
           <Reveal>
             <SectionHeading
-              eyebrow="Technology"
-              title="Technology Meets Logistics"
-              description="The product experience is designed to feel like a SaaS platform, while still respecting the realities of global freight operations."
+              eyebrow={copy.technology.eyebrow}
+              title={copy.technology.title}
+              description={copy.technology.description}
             />
           </Reveal>
 

@@ -1,27 +1,19 @@
+"use client";
+
+import { useLanguage } from "@/components/providers/language-provider";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { TransportIcon } from "@/components/ui/transport-icon";
 
-const modes = [
-  {
-    title: "Ocean Freight",
-    mode: "ocean",
-    copy: "Strategic control for containerized freight with visibility across major global trade lanes.",
-  },
-  {
-    title: "Air Freight",
-    mode: "air",
-    copy: "Priority routing for time-sensitive moves where speed and responsive execution matter most.",
-  },
-  {
-    title: "Ground Transportation",
-    mode: "ground",
-    copy: "Reliable inland coordination that connects ports, airports, warehouses and final delivery points.",
-  },
-];
-
 export function TransportModesSection() {
+  const { copy } = useLanguage();
+  const modes = [
+    { ...copy.modes.items[0], mode: "ocean" },
+    { ...copy.modes.items[1], mode: "air" },
+    { ...copy.modes.items[2], mode: "ground" },
+  ];
+
   return (
     <section
       id="transport-modes"
@@ -30,9 +22,9 @@ export function TransportModesSection() {
       <div className="absolute inset-0 bg-brand-grid opacity-30" />
       <Container className="relative z-10">
         <SectionHeading
-          eyebrow="Transport Modes"
-          title="Multimodal freight execution with a premium product feel."
-          description="Every mode lives inside the same operating system: clear visibility, better routing intelligence, and disciplined execution."
+          eyebrow={copy.modes.eyebrow}
+          title={copy.modes.title}
+          description={copy.modes.description}
           invert
         />
 
@@ -50,7 +42,7 @@ export function TransportModesSection() {
                 </p>
                 <div className="mt-6 inline-flex items-center gap-3 text-sm uppercase tracking-[0.22em] text-white/46">
                   <span className="h-px w-8 bg-white/20" />
-                  Mode Intelligence
+                  {copy.modes.kicker}
                 </div>
               </article>
             </Reveal>
@@ -60,4 +52,3 @@ export function TransportModesSection() {
     </section>
   );
 }
-
