@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-white/10;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(179, 58, 91, 0.16), transparent 26%),
+      linear-gradient(180deg, #07152c 0%, #0b1f3b 24%, #eef2f7 24%, #f6f8fb 100%);
+    color: var(--color-ink-strong);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(179, 58, 91, 0.35);
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .surface-card {
+    @apply rounded-[28px] border border-slate-900/10 bg-white/85 shadow-panel backdrop-blur;
+  }
+
+  .surface-dark {
+    @apply rounded-[32px] border border-white/10 bg-white/[0.04] shadow-glow backdrop-blur;
+  }
+
+  .section-padding {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em];
+  }
+
+  .section-label::before {
+    content: "";
+    @apply h-px w-12 bg-current opacity-35;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grid-fade {
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+  }
+}
