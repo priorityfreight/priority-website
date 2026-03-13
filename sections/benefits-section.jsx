@@ -1,5 +1,6 @@
 "use client";
 
+import { PriorityLogo } from "@/components/brand/priority-logo";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
@@ -23,13 +24,16 @@ export function BenefitsSection() {
           {copy.benefits.items.map((benefit, index) => (
             <Reveal key={benefit.title} delay={0.07 * index}>
               <div className="surface-card h-full p-6">
-                <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-ink-soft)]">
-                  0{index + 1}
+                <div className="flex items-center justify-between">
+                  <div className="text-xs font-semibold uppercase tracking-[0.3em] text-white/52">
+                    0{index + 1}
+                  </div>
+                  <PriorityLogo showWordmark={false} className="scale-[0.56] opacity-90" />
                 </div>
-                <h3 className="mt-8 text-2xl font-semibold text-[var(--color-ink-strong)]">
+                <h3 className="mt-8 text-2xl font-semibold text-white">
                   {benefit.title}
                 </h3>
-                <p className="mt-4 text-base leading-8 text-[var(--color-ink-soft)]">
+                <p className="mt-4 text-base leading-8 text-white/68">
                   {benefit.copy}
                 </p>
               </div>

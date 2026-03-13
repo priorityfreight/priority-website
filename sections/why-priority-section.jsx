@@ -1,5 +1,6 @@
 "use client";
 
+import { PriorityLogo } from "@/components/brand/priority-logo";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
@@ -21,16 +22,16 @@ export function WhyPrioritySection() {
             />
 
             <div className="surface-card mt-8 overflow-hidden p-0">
-              <div className="border-b border-slate-900/10 px-6 py-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-ink-soft)]">
+              <div className="border-b border-white/10 px-6 py-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/52">
                   {copy.why.panelTitle}
                 </p>
               </div>
-              <div className="grid gap-0 divide-y divide-slate-900/8">
+              <div className="grid gap-0 divide-y divide-white/10">
                 {copy.why.panelLines.map((line) => (
                   <div
                     key={line}
-                    className="px-6 py-5 text-base leading-8 text-[var(--color-ink-soft)]"
+                    className="px-6 py-5 text-base leading-8 text-white/68"
                   >
                     {line}
                   </div>
@@ -43,13 +44,13 @@ export function WhyPrioritySection() {
             {copy.why.features.map((feature, index) => (
               <Reveal key={feature.title} delay={0.08 * index}>
                 <div className="surface-card h-full p-6">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(128,0,32,0.12),rgba(179,58,91,0.08))] text-[var(--color-burgundy)]">
-                    <span className="text-lg font-semibold">0{index + 1}</span>
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(128,0,32,0.22),rgba(179,58,91,0.08))]">
+                    <PriorityLogo showWordmark={false} className="scale-[0.76]" />
                   </div>
-                  <h3 className="mt-5 text-xl font-semibold text-[var(--color-ink-strong)]">
+                  <h3 className="mt-5 text-xl font-semibold text-white">
                     {feature.title}
                   </h3>
-                  <p className="mt-3 text-base leading-8 text-[var(--color-ink-soft)]">
+                  <p className="mt-3 text-base leading-8 text-white/68">
                     {feature.copy}
                   </p>
                 </div>

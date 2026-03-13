@@ -1,5 +1,6 @@
 "use client";
 
+import { PriorityLogo } from "@/components/brand/priority-logo";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
@@ -40,24 +41,27 @@ export function TechnologySection() {
                 <div className="surface-card relative overflow-hidden p-6 sm:p-7">
                   <div className={`absolute inset-0 bg-gradient-to-r ${block.accent}`} />
                   <div className="relative z-10 grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-center">
-                    <div className="rounded-[22px] border border-slate-900/10 bg-[linear-gradient(180deg,rgba(11,31,59,0.04),rgba(11,31,59,0.01))] p-5">
-                      <div className="mb-4 flex items-center gap-2">
-                        <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-burgundy)]" />
-                        <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-orbit)]" />
-                        <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-steel)]" />
+                    <div className="rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-5">
+                      <div className="mb-4 flex items-center justify-between">
+                        <PriorityLogo showWordmark={false} className="scale-[0.7] opacity-95" />
+                        <div className="flex items-center gap-2">
+                          <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-burgundy)]" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-orbit)]" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-steel)]" />
+                        </div>
                       </div>
                       <div className="space-y-2">
-                        <div className="h-2 rounded-full bg-[rgba(11,31,59,0.12)]" />
-                        <div className="h-2 w-4/5 rounded-full bg-[rgba(11,31,59,0.08)]" />
-                        <div className="h-2 w-3/5 rounded-full bg-[rgba(11,31,59,0.08)]" />
+                        <div className="h-2 rounded-full bg-white/14" />
+                        <div className="h-2 w-4/5 rounded-full bg-white/10" />
+                        <div className="h-2 w-3/5 rounded-full bg-white/10" />
                       </div>
                     </div>
 
                     <div className="relative z-10">
-                      <h3 className="text-2xl font-semibold text-[var(--color-ink-strong)]">
+                      <h3 className="text-2xl font-semibold text-white">
                         {block.title}
                       </h3>
-                      <p className="mt-3 text-base leading-8 text-[var(--color-ink-soft)]">
+                      <p className="mt-3 text-base leading-8 text-white/68">
                         {block.body}
                       </p>
                     </div>

@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 
+import { PriorityLogo } from "@/components/brand/priority-logo";
 import { useLanguage } from "@/components/providers/language-provider";
-import { TransportIcon } from "@/components/ui/transport-icon";
 
 export function HeroNetwork() {
   const { copy } = useLanguage();
@@ -163,8 +163,8 @@ export function HeroNetwork() {
           }}
         >
           <div className="flex items-center gap-3 text-white">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(128,0,32,0.36),rgba(179,58,91,0.14))]">
-              <TransportIcon mode={card.mode} />
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(128,0,32,0.36),rgba(179,58,91,0.14))]">
+              <PriorityLogo showWordmark={false} className="scale-[0.72]" />
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.24em] text-white/55">

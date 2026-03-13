@@ -15,8 +15,9 @@
   body {
     background:
       radial-gradient(circle at top left, rgba(179, 58, 91, 0.16), transparent 26%),
-      linear-gradient(180deg, #07152c 0%, #0b1f3b 24%, #eef2f7 24%, #f6f8fb 100%);
-    color: var(--color-ink-strong);
+      radial-gradient(circle at 85% 18%, rgba(144, 158, 174, 0.12), transparent 22%),
+      linear-gradient(180deg, #07152c 0%, #0b1f3b 58%, #08172e 100%);
+    color: var(--color-light);
     overflow-x: hidden;
   }
 
@@ -28,11 +29,11 @@
 
 @layer components {
   .surface-card {
-    @apply rounded-[28px] border border-slate-900/10 bg-white/85 shadow-panel backdrop-blur;
+    @apply rounded-[28px] border border-white/10 bg-white/[0.04] shadow-glow backdrop-blur;
   }
 
   .surface-dark {
-    @apply rounded-[32px] border border-white/10 bg-white/[0.04] shadow-glow backdrop-blur;
+    @apply rounded-[32px] border border-white/10 bg-white/[0.06] shadow-glow backdrop-blur;
   }
 
   .section-padding {

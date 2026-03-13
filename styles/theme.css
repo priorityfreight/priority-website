@@ -21,8 +21,8 @@
 
 .bg-soft-grid {
   background-image:
-    linear-gradient(rgba(11, 31, 59, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(11, 31, 59, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -36,4 +36,3 @@
 .orbit-stroke {
   background: linear-gradient(90deg, #800020 0%, #b33a5b 55%, #909eae 100%);
 }
-

@@ -11,13 +11,11 @@ export function SectionHeading({
       ? "mx-auto max-w-3xl text-center items-center"
       : "max-w-3xl";
 
-  const tone = invert
-    ? "text-white"
-    : "text-[var(--color-ink-strong)]";
+  const tone = invert ? "text-white" : "text-white";
 
   const copyTone = invert
     ? "text-[rgba(229,229,229,0.74)]"
-    : "text-[var(--color-ink-soft)]";
+    : "text-[rgba(229,229,229,0.72)]";
 
   return (
     <div className={`flex flex-col gap-5 ${alignment} ${className}`}>
@@ -35,4 +33,3 @@ export function SectionHeading({
     </div>
   );
 }
-
