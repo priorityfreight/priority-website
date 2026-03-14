@@ -22,6 +22,7 @@ const translations = {
       whatWeDo: "Qué hacemos",
       modes: "Modos de transporte",
       technology: "Tecnología",
+      presentation: "Presentacion de servicios",
       contact: "Contacto",
       quote: "Solicitar cotización",
       toggle: "Abrir navegación",
@@ -173,7 +174,14 @@ const translations = {
       title: "Mueve carga de forma más inteligente",
       description:
         "PRIORITY está hecho para empresas que quieren más que forwarding. Es para equipos que esperan tecnología, inteligencia y una ejecución operativa premium.",
-      primary: "Solicitar cotización",
+      connectLine:
+        "Habla con ventas u operaciones por telefono, correo o WhatsApp segun el tipo de apoyo que necesites.",
+      sales: "Ventas",
+      office: "Oficina",
+      phoneLabel: "Telefono",
+      emailLabel: "Correo",
+      whatsapp: "WhatsApp",
+      presentation: "Presentacion de servicios",
       secondary: "Volver arriba",
     },
     footer: {
@@ -182,6 +190,7 @@ const translations = {
       whatWeDo: "Qué hacemos",
       modes: "Modos de transporte",
       technology: "Tecnología",
+      presentation: "Presentacion",
       contact: "Contacto",
     },
   },
@@ -198,6 +207,7 @@ const translations = {
       whatWeDo: "What We Do",
       modes: "Transport Modes",
       technology: "Technology",
+      presentation: "Services Presentation",
       contact: "Contact",
       quote: "Request Quote",
       toggle: "Toggle navigation",
@@ -349,7 +359,14 @@ const translations = {
       title: "Move Freight Smarter",
       description:
         "PRIORITY is built for businesses that want more than forwarding. It is for teams that expect technology, intelligence and premium operational execution.",
-      primary: "Request a Quote",
+      connectLine:
+        "Reach our sales or operations team by phone, email, or WhatsApp depending on the support you need.",
+      sales: "Sales",
+      office: "Office",
+      phoneLabel: "Phone",
+      emailLabel: "Email",
+      whatsapp: "WhatsApp",
+      presentation: "Services Presentation",
       secondary: "Back to Top",
     },
     footer: {
@@ -358,6 +375,7 @@ const translations = {
       whatWeDo: "What We Do",
       modes: "Transport Modes",
       technology: "Technology",
+      presentation: "Presentation",
       contact: "Contact",
     },
   },
@@ -421,4 +439,3 @@ export function useLanguage() {
 
   return context;
 }
-

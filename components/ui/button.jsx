@@ -19,7 +19,7 @@ export function Button({
   const classNames = `inline-flex min-h-12 items-center justify-center rounded-full px-5 sm:px-6 text-sm font-semibold tracking-[0.08em] transition-all duration-200 ${styles[variant]} ${className}`;
   const isExternal =
     typeof href === "string" &&
-    (href.startsWith("http") || href.startsWith("mailto:"));
+    (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:"));
 
   if (href) {
     if (isExternal) {

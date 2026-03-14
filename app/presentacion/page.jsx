@@ -67,6 +67,27 @@ const differentiators = [
   "Combinamos experiencia humana con enfoque de inteligencia logistica.",
 ];
 
+const contactChannels = [
+  {
+    title: "Ventas",
+    phone: "+52 81 3739 4200",
+    phoneHref: "tel:+528137394200",
+    email: "ventas@fipriority.com",
+    emailHref: "mailto:ventas@fipriority.com",
+    whatsappHref:
+      "https://wa.me/528137394200?text=Hola%20PRIORITY,%20me%20gustaria%20recibir%20informacion%20sobre%20sus%20servicios.",
+  },
+  {
+    title: "Oficina",
+    phone: "+52 81 4005 0928",
+    phoneHref: "tel:+528140050928",
+    email: "operaciones@fipriority.com",
+    emailHref: "mailto:operaciones@fipriority.com",
+    whatsappHref:
+      "https://wa.me/528140050928?text=Hola%20PRIORITY,%20necesito%20apoyo%20con%20una%20operacion%20logistica.",
+  },
+];
+
 export default function PresentacionPage() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#07152C_0%,#0B1F3B_45%,#07152C_100%)] text-white">
@@ -417,13 +438,76 @@ export default function PresentacionPage() {
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <Button href="mailto:hello@priorityfi.com">
-                    Agendar llamada
+                  <Button
+                    href={contactChannels[0].whatsappHref}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    WhatsApp Ventas
+                  </Button>
+                  <Button href={contactChannels[0].emailHref} variant="secondary">
+                    Correo Ventas
                   </Button>
                   <Button href="/" variant="secondary">
                     Ver sitio web
                   </Button>
                 </div>
+              </div>
+
+              <div className="mt-10 grid gap-5 lg:grid-cols-2">
+                {contactChannels.map((channel) => (
+                  <div
+                    key={channel.title}
+                    className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6"
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/50">
+                          {channel.title}
+                        </p>
+                        <a
+                          href={channel.phoneHref}
+                          className="mt-3 block text-2xl font-semibold text-white transition hover:text-white/82"
+                        >
+                          {channel.phone}
+                        </a>
+                      </div>
+                      <PriorityLogo showWordmark={false} className="opacity-95" />
+                    </div>
+
+                    <div className="mt-5 space-y-3 text-sm text-white/72">
+                      <p>
+                        <span className="mr-2 text-white/46">Telefono</span>
+                        <a href={channel.phoneHref} className="transition hover:text-white">
+                          {channel.phone}
+                        </a>
+                      </p>
+                      <p>
+                        <span className="mr-2 text-white/46">Correo</span>
+                        <a href={channel.emailHref} className="transition hover:text-white">
+                          {channel.email}
+                        </a>
+                      </p>
+                    </div>
+
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <Button href={channel.phoneHref} variant="light">
+                        Llamar
+                      </Button>
+                      <Button href={channel.emailHref} variant="secondary">
+                        Correo
+                      </Button>
+                      <Button
+                        href={channel.whatsappHref}
+                        variant="secondary"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        WhatsApp
+                      </Button>
+                    </div>
+                  </div>
+                ))}
               </div>
 
               <div className="mt-12 border-t border-white/10 pt-8 text-sm font-medium uppercase tracking-[0.38em] text-white/56">

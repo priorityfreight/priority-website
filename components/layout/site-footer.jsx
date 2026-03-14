@@ -24,6 +24,7 @@ export function SiteFooter() {
             <Link href="#what-we-do">{copy.footer.whatWeDo}</Link>
             <Link href="#transport-modes">{copy.footer.modes}</Link>
             <Link href="#technology">{copy.footer.technology}</Link>
+            <Link href="/presentacion">{copy.footer.presentation}</Link>
             <Link href="#contact">{copy.footer.contact}</Link>
           </div>
         </div>

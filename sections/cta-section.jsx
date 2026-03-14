@@ -1,5 +1,6 @@
 "use client";
 
+import { PriorityLogo } from "@/components/brand/priority-logo";
 import { useLanguage } from "@/components/providers/language-provider";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -7,6 +8,26 @@ import { Reveal } from "@/components/ui/reveal";
 
 export function CTASection() {
   const { copy } = useLanguage();
+  const contacts = [
+    {
+      title: copy.cta.sales,
+      phone: "+52 81 3739 4200",
+      phoneHref: "tel:+528137394200",
+      email: "ventas@fipriority.com",
+      emailHref: "mailto:ventas@fipriority.com",
+      whatsappHref:
+        "https://wa.me/528137394200?text=Hola%20PRIORITY,%20me%20gustaria%20recibir%20informacion%20sobre%20sus%20servicios.",
+    },
+    {
+      title: copy.cta.office,
+      phone: "+52 81 4005 0928",
+      phoneHref: "tel:+528140050928",
+      email: "operaciones@fipriority.com",
+      emailHref: "mailto:operaciones@fipriority.com",
+      whatsappHref:
+        "https://wa.me/528140050928?text=Hola%20PRIORITY,%20necesito%20apoyo%20con%20una%20operacion%20logistica.",
+    },
+  ];
 
   return (
     <section id="contact" className="section-padding relative pt-10">
@@ -24,11 +45,27 @@ export function CTASection() {
                 <p className="mt-5 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
                   {copy.cta.description}
                 </p>
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-white/58 sm:text-base">
+                  {copy.cta.connectLine}
+                </p>
               </div>
 
-              <div className="flex flex-col gap-4 sm:flex-row lg:flex-col">
-                <Button href="mailto:hello@priorityfi.com" className="min-w-[220px]">
-                  {copy.cta.primary}
+              <div className="flex flex-col gap-4 sm:flex-row lg:flex-col lg:items-end">
+                <PriorityLogo
+                  layout="vertical"
+                  className="hidden lg:flex lg:self-end"
+                  subtitle={copy.brandSubtitle}
+                />
+                <Button
+                  href={contacts[0].whatsappHref}
+                  className="min-w-[220px]"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {copy.cta.whatsapp} {copy.cta.sales}
+                </Button>
+                <Button href="/presentacion" variant="secondary" className="min-w-[220px]">
+                  {copy.cta.presentation}
                 </Button>
                 <Button
                   href="#home"
@@ -38,6 +75,62 @@ export function CTASection() {
                   {copy.cta.secondary}
                 </Button>
               </div>
+            </div>
+
+            <div className="relative z-10 mt-10 grid gap-5 lg:grid-cols-2">
+              {contacts.map((contact) => (
+                <div
+                  key={contact.title}
+                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur"
+                >
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/45">
+                        {contact.title}
+                      </p>
+                      <a
+                        href={contact.phoneHref}
+                        className="mt-3 block text-2xl font-semibold text-white transition hover:text-white/84"
+                      >
+                        {contact.phone}
+                      </a>
+                    </div>
+                    <PriorityLogo showWordmark={false} className="opacity-95" />
+                  </div>
+
+                  <div className="mt-5 space-y-3 text-sm text-white/72">
+                    <p>
+                      <span className="mr-2 text-white/46">{copy.cta.phoneLabel}</span>
+                      <a href={contact.phoneHref} className="transition hover:text-white">
+                        {contact.phone}
+                      </a>
+                    </p>
+                    <p>
+                      <span className="mr-2 text-white/46">{copy.cta.emailLabel}</span>
+                      <a href={contact.emailHref} className="transition hover:text-white">
+                        {contact.email}
+                      </a>
+                    </p>
+                  </div>
+
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <Button href={contact.phoneHref} variant="light">
+                      {copy.cta.phoneLabel}
+                    </Button>
+                    <Button href={contact.emailHref} variant="secondary">
+                      {copy.cta.emailLabel}
+                    </Button>
+                    <Button
+                      href={contact.whatsappHref}
+                      variant="secondary"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {copy.cta.whatsapp}
+                    </Button>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </Reveal>
