@@ -132,9 +132,7 @@ export default function PresentacionPage() {
 
               <div className="surface-dark overflow-hidden p-8">
                 <div className="mb-6 flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-[0.28em] text-white/50">
-                    Idea fuerza
-                  </span>
+                  <span />
                   <PriorityLogo showWordmark={false} className="scale-[0.82]" />
                 </div>
                 <p className="text-2xl font-medium leading-10 text-white/90">
@@ -155,31 +153,50 @@ export default function PresentacionPage() {
             <div className="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
               <div className="surface-card p-8">
                 <p className="text-lg leading-9 text-white/74">
-                  PRIORITY Freight Intelligence es una empresa de logistica
-                  internacional enfocada en optimizar la mercancia de sus
-                  clientes mediante servicio especializado, analisis
-                  estrategico y soluciones logisticas mas eficientes.
+                  El mundo se mueve gracias a la logistica. Pero no toda la
+                  logistica se hace de la misma manera.
                 </p>
                 <p className="mt-6 text-lg leading-9 text-white/74">
-                  No nos presentamos solo como un proveedor de transporte. Nos
-                  posicionamos como un socio que entiende la operacion del
-                  cliente, analiza su cadena de suministro y propone la mejor
-                  solucion segun la importancia, urgencia y contexto de cada
-                  embarque.
+                  Con demasiada frecuencia, el transporte de mercancias se
+                  trata como una simple transaccion: un embarque que mover, un
+                  contenedor que entregar, una tarifa que negociar.
+                </p>
+                <p className="mt-6 text-lg leading-9 text-white/74">
+                  Sin embargo, el comercio global es mucho mas complejo que
+                  eso.
+                </p>
+                <p className="mt-6 text-lg leading-9 text-white/74">
+                  Detras de cada embarque existe una empresa que busca crecer,
+                  un negocio que se expande hacia nuevos mercados y decisiones
+                  que impactan cadenas de suministro completas.
+                </p>
+                <p className="mt-6 text-lg leading-9 text-white/74">
+                  En PRIORITY Freight Intelligence creemos que la logistica
+                  debe ser mas que transporte, debe ser inteligente. Creemos
+                  que cada embarque merece analisis, cada ruta merece
+                  optimizacion y cada cliente merece un socio logistico que
+                  piense mas alla de la siguiente entrega.
+                </p>
+                <p className="mt-6 text-lg leading-9 text-white/74">
+                  Por eso trabajamos como una extension del equipo de nuestros
+                  clientes, ayudandolos a tomar mejores decisiones logisticas,
+                  reducir riesgos y optimizar recursos.
+                </p>
+                <p className="mt-6 text-lg leading-9 text-white/74">
+                  Creemos que la logistica debe impulsar el crecimiento de las
+                  empresas, y cuando nuestros clientes crecen, nosotros
+                  crecemos con ellos y eso es lo que nos define.
                 </p>
               </div>
 
               <div className="surface-dark p-8">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-[0.28em] text-white/50">
-                    Mensaje central
-                  </span>
+                  <span />
                   <PriorityLogo showWordmark={false} className="scale-[0.72]" />
                 </div>
                 <p className="mt-6 text-3xl font-semibold leading-tight text-white">
-                  El transporte internacional puede ser mas inteligente cuando
-                  se combina experiencia logistica, asesoria y analisis de
-                  datos.
+                  Porque mover mercancia es facil, analizar y optimizar es lo
+                  que genera valor.
                 </p>
               </div>
             </div>
