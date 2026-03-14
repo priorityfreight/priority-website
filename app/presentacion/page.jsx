@@ -22,7 +22,7 @@ const slideItems = [
   { id: "metodologia", label: "Como trabajamos" },
   { id: "beneficios", label: "Beneficios" },
   { id: "diferenciadores", label: "Diferenciadores" },
-  { id: "cierre", label: "Cierre comercial" },
+  { id: "cierre", label: "Informacion de contacto" },
 ];
 
 const coreServices = [
@@ -96,20 +96,28 @@ export default function PresentacionPage() {
       <div className="relative z-10 flex">
         <SlideNav items={slideItems} />
 
-        <main className="flex-1">
+        <main className="flex-1 xl:pl-[280px]">
           <SlideShell
             id="portada"
             index={1}
             eyebrow="PRIORITY Freight Intelligence"
-            title="Presentacion comercial de servicios"
+            title=""
           >
             <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
               <div className="max-w-3xl">
-                <PriorityLogo className="mb-10" subtitle="Freight Intelligence" />
-                <p className="max-w-3xl text-balance text-xl leading-9 text-white/76 sm:text-2xl">
-                  Logistica internacional mas inteligente para empresas que
-                  necesitan eficiencia, visibilidad, asesoria y soluciones
-                  reales para mover mercancias hacia USA y CAN.
+                <PriorityLogo
+                  className="mb-12 origin-left scale-[1.18] sm:scale-[1.28]"
+                  subtitle="Freight Intelligence"
+                />
+                <p className="max-w-4xl text-balance text-xl leading-9 text-white/76 sm:text-2xl sm:leading-10">
+                  En PRIORITY Freight Intelligence creemos que la logistica no
+                  debe ser solo un servicio, sino una alianza estrategica.
+                  Trabajamos como una extension del equipo de nuestros
+                  clientes, ayudandolos a tomar mejores decisiones logisticas y
+                  construir cadenas de suministro mas eficientes y confiables.
+                </p>
+                <p className="mt-6 max-w-3xl text-xl font-medium leading-9 text-white/90 sm:text-2xl">
+                  Si nuestros clientes crecen, nosotros crecemos con ellos.
                 </p>
                 <div className="mt-10 flex flex-wrap gap-4">
                   <Button href="#quienes-somos">Ver presentacion</Button>
@@ -416,8 +424,8 @@ export default function PresentacionPage() {
           <SlideShell
             id="cierre"
             index={10}
-            eyebrow="Cierre comercial"
-            title="Move Freight Smarter"
+            eyebrow="Informacion de contacto"
+            title="Informacion de contacto"
             className="border-b-0"
           >
             <div className="surface-dark overflow-hidden p-8 sm:p-10 lg:p-12">

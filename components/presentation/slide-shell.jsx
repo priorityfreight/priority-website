@@ -20,9 +20,11 @@ export function SlideShell({
               </span>
               <span className="section-label text-white/58">{eyebrow}</span>
             </div>
-            <h2 className="text-balance max-w-5xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-              {title}
-            </h2>
+            {title ? (
+              <h2 className="text-balance max-w-5xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+                {title}
+              </h2>
+            ) : null}
           </div>
         </div>
 
@@ -31,4 +33,3 @@ export function SlideShell({
     </section>
   );
 }
-
