@@ -15,28 +15,28 @@ export function SiteHeader() {
   const navigation = [
     { label: copy.nav.home, href: "#home" },
     { label: copy.nav.whatWeDo, href: "#what-we-do" },
-    { label: copy.nav.modes, href: "#transport-modes" },
+    { label: copy.nav.services, href: "#services" },
     { label: copy.nav.technology, href: "#technology" },
     { label: copy.nav.presentation, href: "/presentacion" },
     { label: copy.nav.contact, href: "#contact" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 pt-4">
+    <header className="sticky top-0 z-50 pt-3 sm:pt-4">
       <Container>
-        <div className="relative flex items-center justify-between rounded-full border border-white/12 bg-[rgba(7,21,44,0.78)] px-4 py-3 shadow-[0_20px_50px_rgba(2,8,20,0.28)] backdrop-blur-xl sm:px-5">
-          <Link href="#home" className="relative z-10">
+        <div className="relative flex items-center justify-between rounded-[28px] border border-white/12 bg-[rgba(7,21,44,0.78)] px-3 py-2.5 shadow-[0_20px_50px_rgba(2,8,20,0.28)] backdrop-blur-xl sm:rounded-full sm:px-5 sm:py-3">
+          <Link href="#home" className="relative z-10 origin-left max-[360px]:scale-[0.9]">
             <PriorityLogo subtitle={copy.brandSubtitle} />
           </Link>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <div className="hidden lg:block">
               <LanguageToggle />
             </div>
 
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white lg:hidden sm:h-11 sm:w-11"
               onClick={() => setIsOpen((value) => !value)}
               aria-expanded={isOpen}
               aria-label={copy.nav.toggle}
@@ -68,7 +68,7 @@ export function SiteHeader() {
           </div>
 
           <div
-            className={`absolute left-0 right-0 top-[calc(100%+12px)] overflow-hidden rounded-[28px] border border-white/10 bg-[rgba(7,21,44,0.96)] p-4 shadow-[0_24px_48px_rgba(2,8,20,0.28)] backdrop-blur-xl transition-all duration-200 lg:hidden ${
+            className={`absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(7,21,44,0.96)] p-3 shadow-[0_24px_48px_rgba(2,8,20,0.28)] backdrop-blur-xl transition-all duration-200 sm:top-[calc(100%+12px)] sm:rounded-[28px] sm:p-4 lg:hidden ${
               isOpen
                 ? "visible translate-y-0 opacity-100"
                 : "invisible -translate-y-3 opacity-0"

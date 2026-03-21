@@ -16,7 +16,7 @@ export function Button({
   children,
   ...props
 }) {
-  const classNames = `inline-flex min-h-12 items-center justify-center rounded-full px-5 sm:px-6 text-sm font-semibold tracking-[0.08em] transition-all duration-200 ${styles[variant]} ${className}`;
+  const classNames = `inline-flex min-h-12 items-center justify-center rounded-full px-4 text-sm font-semibold tracking-[0.05em] transition-all duration-200 sm:px-6 sm:tracking-[0.08em] ${styles[variant]} ${className}`;
   const isExternal =
     typeof href === "string" &&
     (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:"));

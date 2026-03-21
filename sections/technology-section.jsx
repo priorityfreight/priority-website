@@ -26,7 +26,7 @@ export function TechnologySection() {
   return (
     <section id="technology" className="section-padding relative">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)]">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)]">
           <Reveal>
             <SectionHeading
               eyebrow={copy.technology.eyebrow}
@@ -35,13 +35,13 @@ export function TechnologySection() {
             />
           </Reveal>
 
-          <div className="grid gap-5">
+          <div className="grid gap-4 sm:gap-5">
             {blocks.map((block, index) => (
               <Reveal key={block.title} delay={0.1 * index}>
-                <div className="surface-card relative overflow-hidden p-6 sm:p-7">
+                <div className="surface-card relative overflow-hidden p-5 sm:p-7">
                   <div className={`absolute inset-0 bg-gradient-to-r ${block.accent}`} />
-                  <div className="relative z-10 grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-center">
-                    <div className="rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-5">
+                  <div className="relative z-10 grid gap-5 md:grid-cols-[180px_minmax(0,1fr)] md:items-center md:gap-6">
+                    <div className="rounded-[20px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-4 sm:rounded-[22px] sm:p-5">
                       <div className="mb-4 flex items-center justify-between">
                         <PriorityLogo showWordmark={false} className="scale-[0.7] opacity-95" />
                         <div className="flex items-center gap-2">
@@ -58,10 +58,10 @@ export function TechnologySection() {
                     </div>
 
                     <div className="relative z-10">
-                      <h3 className="text-2xl font-semibold text-white">
+                      <h3 className="text-xl font-semibold text-white sm:text-2xl">
                         {block.title}
                       </h3>
-                      <p className="mt-3 text-base leading-8 text-white/68">
+                      <p className="mt-3 text-[0.98rem] leading-7 text-white/68 sm:text-base sm:leading-8">
                         {block.body}
                       </p>
                     </div>

@@ -33,16 +33,16 @@ export function CTASection() {
     <section id="contact" className="section-padding relative pt-10">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,#0B1F3B_0%,#07152C_100%)] px-6 py-12 shadow-[0_40px_100px_rgba(3,10,24,0.32)] sm:px-10 sm:py-14 lg:px-14 lg:py-16">
+          <div className="relative overflow-hidden rounded-[30px] border border-white/10 bg-[linear-gradient(180deg,#0B1F3B_0%,#07152C_100%)] px-5 py-10 shadow-[0_40px_100px_rgba(3,10,24,0.32)] sm:rounded-[36px] sm:px-10 sm:py-14 lg:px-14 lg:py-16">
             <div className="absolute inset-0 bg-brand-grid opacity-30" />
             <div className="absolute right-[-120px] top-[-120px] h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(179,58,91,0.36),transparent_68%)]" />
-            <div className="relative z-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+            <div className="relative z-10 grid gap-7 sm:gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
               <div>
                 <p className="section-label text-white/62">{copy.cta.eyebrow}</p>
-                <h2 className="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-white sm:text-5xl">
+                <h2 className="mt-4 max-w-3xl text-balance text-3xl font-semibold leading-tight text-white sm:mt-5 sm:text-5xl">
                   {copy.cta.title}
                 </h2>
-                <p className="mt-5 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
+                <p className="mt-4 max-w-2xl text-[0.98rem] leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
                   {copy.cta.description}
                 </p>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-white/58 sm:text-base">
@@ -50,7 +50,7 @@ export function CTASection() {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-4 sm:flex-row lg:flex-col lg:items-end">
+              <div className="flex flex-col gap-3 sm:gap-4 sm:flex-row lg:flex-col lg:items-end">
                 <PriorityLogo
                   layout="vertical"
                   className="hidden lg:flex lg:self-end"
@@ -58,39 +58,39 @@ export function CTASection() {
                 />
                 <Button
                   href={contacts[0].whatsappHref}
-                  className="min-w-[220px]"
+                  className="w-full sm:min-w-[220px] sm:w-auto"
                   target="_blank"
                   rel="noreferrer"
                 >
                   {copy.cta.whatsapp} {copy.cta.sales}
                 </Button>
-                <Button href="/presentacion" variant="secondary" className="min-w-[220px]">
+                <Button href="/presentacion" variant="secondary" className="w-full sm:min-w-[220px] sm:w-auto">
                   {copy.cta.presentation}
                 </Button>
                 <Button
                   href="#home"
                   variant="secondary"
-                  className="min-w-[220px]"
+                  className="w-full sm:min-w-[220px] sm:w-auto"
                 >
                   {copy.cta.secondary}
                 </Button>
               </div>
             </div>
 
-            <div className="relative z-10 mt-10 grid gap-5 lg:grid-cols-2">
+            <div className="relative z-10 mt-8 grid gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-2">
               {contacts.map((contact) => (
                 <div
                   key={contact.title}
-                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur"
+                  className="rounded-[24px] border border-white/10 bg-white/[0.04] p-5 backdrop-blur sm:rounded-[28px] sm:p-6"
                 >
                   <div className="flex items-center justify-between gap-4">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.32em] text-white/45">
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/45 sm:text-xs sm:tracking-[0.32em]">
                         {contact.title}
                       </p>
                       <a
                         href={contact.phoneHref}
-                        className="mt-3 block text-2xl font-semibold text-white transition hover:text-white/84"
+                        className="mt-3 block text-xl font-semibold leading-8 text-white transition hover:text-white/84 sm:text-2xl"
                       >
                         {contact.phone}
                       </a>
@@ -113,16 +113,17 @@ export function CTASection() {
                     </p>
                   </div>
 
-                  <div className="mt-6 flex flex-wrap gap-3">
-                    <Button href={contact.phoneHref} variant="light">
+                  <div className="mt-6 grid gap-3 sm:flex sm:flex-wrap">
+                    <Button href={contact.phoneHref} variant="light" className="w-full sm:w-auto">
                       {copy.cta.phoneLabel}
                     </Button>
-                    <Button href={contact.emailHref} variant="secondary">
+                    <Button href={contact.emailHref} variant="secondary" className="w-full sm:w-auto">
                       {copy.cta.emailLabel}
                     </Button>
                     <Button
                       href={contact.whatsappHref}
                       variant="secondary"
+                      className="w-full sm:w-auto"
                       target="_blank"
                       rel="noreferrer"
                     >

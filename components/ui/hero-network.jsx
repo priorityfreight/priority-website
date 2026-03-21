@@ -28,12 +28,49 @@ export function HeroNetwork() {
     },
   ];
 
+  function ModeCard({ card, mobile = false }) {
+    return (
+      <motion.div
+        className={
+          mobile
+            ? "surface-dark px-4 py-3"
+            : `absolute ${card.className} surface-dark w-[190px] px-4 py-3 sm:w-[210px]`
+        }
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: [0, -6, 0] }}
+        transition={{
+          opacity: { duration: 0.5, delay: card.delay },
+          y: {
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: card.delay,
+          },
+        }}
+      >
+        <div className="flex items-center gap-3 text-white">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(128,0,32,0.36),rgba(179,58,91,0.14))]">
+            <PriorityLogo showWordmark={false} className="scale-[0.72]" />
+          </div>
+          <div className="min-w-0">
+            <p className="text-[0.65rem] uppercase tracking-[0.28em] text-white/55 sm:text-xs">
+              {copy.header.networkLayer}
+            </p>
+            <p className="text-base font-medium leading-7 text-white/92 sm:text-sm sm:leading-6">
+              {card.label}
+            </p>
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
   return (
-    <div className="relative mx-auto flex aspect-[1.08] w-full max-w-[560px] items-center justify-center overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(180deg,rgba(13,31,60,0.96),rgba(8,20,40,0.98))] p-8 shadow-[0_40px_100px_rgba(4,10,22,0.45)]">
+    <div className="relative mx-auto w-full max-w-[560px] overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(13,31,60,0.96),rgba(8,20,40,0.98))] p-5 shadow-[0_40px_100px_rgba(4,10,22,0.45)] sm:p-6 md:aspect-[1.08] md:p-8">
       <div className="absolute inset-0 bg-brand-grid opacity-50" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(179,58,91,0.24),transparent_38%)]" />
       <motion.div
-        className="absolute h-[76%] w-[76%] rounded-full border border-white/10"
+        className="absolute left-1/2 top-[30%] h-[44%] w-[44%] -translate-x-1/2 rounded-full border border-white/10 md:left-auto md:top-auto md:h-[76%] md:w-[76%] md:translate-x-0"
         animate={{ rotate: 360 }}
         transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
       >
@@ -42,15 +79,15 @@ export function HeroNetwork() {
       </motion.div>
 
       <motion.div
-        className="absolute h-[58%] w-[58%] rounded-full border border-white/8"
+        className="absolute left-1/2 top-[30%] h-[33%] w-[33%] -translate-x-1/2 rounded-full border border-white/8 md:left-auto md:top-auto md:h-[58%] md:w-[58%] md:translate-x-0"
         animate={{ rotate: -360 }}
         transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
       />
 
-      <div className="absolute inset-6 rounded-[30px] border border-white/5" />
+      <div className="absolute inset-4 rounded-[28px] border border-white/5 md:inset-6 md:rounded-[30px]" />
 
-      <div className="relative z-10 flex h-full w-full items-center justify-center">
-        <div className="relative flex aspect-square w-[72%] items-center justify-center rounded-full bg-[radial-gradient(circle_at_35%_30%,rgba(255,255,255,0.14),rgba(255,255,255,0.04)_40%,rgba(255,255,255,0.02)_70%,transparent_75%)]">
+      <div className="relative z-10 flex h-[300px] w-full items-center justify-center sm:h-[360px] md:h-full">
+        <div className="relative flex aspect-square w-[88%] max-w-[320px] items-center justify-center rounded-full bg-[radial-gradient(circle_at_35%_30%,rgba(255,255,255,0.14),rgba(255,255,255,0.04)_40%,rgba(255,255,255,0.02)_70%,transparent_75%)] sm:max-w-[360px] md:w-[72%] md:max-w-none">
           <motion.div
             className="absolute h-[86%] w-[86%] rounded-full border border-white/10"
             animate={{ scale: [1, 1.04, 1], opacity: [0.8, 1, 0.8] }}
@@ -146,35 +183,17 @@ export function HeroNetwork() {
         </div>
       </div>
 
-      {modeCards.map((card) => (
-        <motion.div
-          key={card.label}
-          className={`absolute ${card.className} surface-dark w-[190px] px-4 py-3 sm:w-[210px]`}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: [0, -6, 0] }}
-          transition={{
-            opacity: { duration: 0.5, delay: card.delay },
-            y: {
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: card.delay,
-            },
-          }}
-        >
-          <div className="flex items-center gap-3 text-white">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(128,0,32,0.36),rgba(179,58,91,0.14))]">
-              <PriorityLogo showWordmark={false} className="scale-[0.72]" />
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.24em] text-white/55">
-                {copy.header.networkLayer}
-              </p>
-              <p className="text-sm font-medium text-white/92">{card.label}</p>
-            </div>
-          </div>
-        </motion.div>
-      ))}
+      <div className="relative z-10 mt-3 grid gap-3 md:hidden">
+        {modeCards.map((card) => (
+          <ModeCard key={card.label} card={card} mobile />
+        ))}
+      </div>
+
+      <div className="hidden md:block">
+        {modeCards.map((card) => (
+          <ModeCard key={card.label} card={card} />
+        ))}
+      </div>
     </div>
   );
 }

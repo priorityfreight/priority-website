@@ -20,6 +20,7 @@ const translations = {
     nav: {
       home: "Inicio",
       whatWeDo: "Qué hacemos",
+      services: "Servicios",
       modes: "Modos de transporte",
       technology: "Tecnología",
       presentation: "Presentacion de servicios",
@@ -71,6 +72,44 @@ const translations = {
         {
           title: "Excelencia operativa",
           copy: "Profesionales experimentados gestionando embarques complejos con el rigor, estructura y respuesta que esperan los equipos modernos.",
+        },
+      ],
+    },
+    services: {
+      eyebrow: "Servicios",
+      title: "Soluciones logisticas presentadas con claridad visual.",
+      description:
+        "Mostramos cada servicio con una ficha visual para que puedas identificar rapido su enfoque, cobertura y propuesta de valor.",
+      items: [
+        {
+          code: "LCL",
+          title: "Consolidado Maritimo",
+          subtitle: "Carga parcial maritima con mejor control de costo y visibilidad.",
+          alt: "Ficha visual del servicio consolidado maritimo LCL.",
+        },
+        {
+          code: "LTL",
+          title: "Consolidado Terrestre",
+          subtitle: "Movimiento transfronterizo flexible para cargas parciales.",
+          alt: "Ficha visual del servicio consolidado terrestre LTL.",
+        },
+        {
+          code: "FTL",
+          title: "Transporte Dedicado FTL",
+          subtitle: "Capacidad completa para operaciones criticas entre MEX, USA y CAN.",
+          alt: "Ficha visual del servicio terrestre FTL.",
+        },
+        {
+          code: "DRAYAGE",
+          title: "Arrastre de Contenedores",
+          subtitle: "Continuidad portuaria y terrestre con coordinacion dedicada.",
+          alt: "Ficha visual del servicio de arrastre de contenedores.",
+        },
+        {
+          code: "AIR",
+          title: "Carga Aerea",
+          subtitle: "Respuesta premium para embarques urgentes y sensibles.",
+          alt: "Ficha visual del servicio de carga aerea.",
         },
       ],
     },
@@ -188,6 +227,7 @@ const translations = {
       description:
         "Una plataforma moderna de inteligencia logística para equipos de freight global que esperan más visibilidad, más control y mejores decisiones.",
       whatWeDo: "Qué hacemos",
+      services: "Servicios",
       modes: "Modos de transporte",
       technology: "Tecnología",
       presentation: "Presentacion",
@@ -205,6 +245,7 @@ const translations = {
     nav: {
       home: "Home",
       whatWeDo: "What We Do",
+      services: "Services",
       modes: "Transport Modes",
       technology: "Technology",
       presentation: "Services Presentation",
@@ -256,6 +297,44 @@ const translations = {
         {
           title: "Operational Excellence",
           copy: "Experienced professionals managing complex shipments with the rigor, structure and responsiveness modern teams expect.",
+        },
+      ],
+    },
+    services: {
+      eyebrow: "Services",
+      title: "Logistics solutions presented in a more visual, premium format.",
+      description:
+        "Each service is shown as a visual product sheet so teams can quickly understand scope, coverage and operational value.",
+      items: [
+        {
+          code: "LCL",
+          title: "Ocean Consolidation",
+          subtitle: "Partial ocean freight with stronger cost control and visibility.",
+          alt: "Visual service sheet for ocean consolidation LCL.",
+        },
+        {
+          code: "LTL",
+          title: "Ground Consolidation",
+          subtitle: "Flexible cross-border movement for partial truckload freight.",
+          alt: "Visual service sheet for cross-border LTL freight.",
+        },
+        {
+          code: "FTL",
+          title: "Dedicated FTL",
+          subtitle: "Full-capacity transportation for critical moves across North America.",
+          alt: "Visual service sheet for full truckload FTL service.",
+        },
+        {
+          code: "DRAYAGE",
+          title: "Container Drayage",
+          subtitle: "Dedicated port-to-destination continuity with tighter coordination.",
+          alt: "Visual service sheet for container drayage.",
+        },
+        {
+          code: "AIR",
+          title: "Air Freight",
+          subtitle: "Premium response for urgent and sensitive shipments.",
+          alt: "Visual service sheet for air freight service.",
         },
       ],
     },
@@ -373,6 +452,7 @@ const translations = {
       description:
         "A modern logistics intelligence platform for global freight teams that expect more visibility, more control, and better decisions.",
       whatWeDo: "What We Do",
+      services: "Services",
       modes: "Transport Modes",
       technology: "Technology",
       presentation: "Presentation",

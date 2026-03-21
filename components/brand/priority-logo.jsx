@@ -16,8 +16,8 @@ export function PriorityLogo({
   const variants = {
     horizontal: {
       asset: wordmarkTone === "light" ? horizontalDarkLogo : horizontalLogo,
-      frameClass: "h-10 w-[188px] sm:h-12 sm:w-[220px]",
-      sizes: "(min-width: 640px) 220px, 188px",
+      frameClass: "h-9 w-[168px] sm:h-12 sm:w-[220px]",
+      sizes: "(min-width: 640px) 220px, 168px",
       alt: `Priority ${subtitle}`,
     },
     vertical: {

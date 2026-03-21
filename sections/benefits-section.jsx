@@ -20,20 +20,20 @@ export function BenefitsSection() {
           align="center"
         />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {copy.benefits.items.map((benefit, index) => (
             <Reveal key={benefit.title} delay={0.07 * index}>
-              <div className="surface-card h-full p-6">
+              <div className="surface-card h-full p-5 sm:p-6">
                 <div className="flex items-center justify-between">
-                  <div className="text-xs font-semibold uppercase tracking-[0.3em] text-white/52">
+                  <div className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/52 sm:text-xs sm:tracking-[0.3em]">
                     0{index + 1}
                   </div>
                   <PriorityLogo showWordmark={false} className="scale-[0.56] opacity-90" />
                 </div>
-                <h3 className="mt-8 text-2xl font-semibold text-white">
+                <h3 className="mt-6 text-xl font-semibold text-white sm:mt-8 sm:text-2xl">
                   {benefit.title}
                 </h3>
-                <p className="mt-4 text-base leading-8 text-white/68">
+                <p className="mt-3 text-[0.98rem] leading-7 text-white/68 sm:mt-4 sm:text-base sm:leading-8">
                   {benefit.copy}
                 </p>
               </div>
