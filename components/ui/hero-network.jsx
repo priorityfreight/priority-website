@@ -2,75 +2,49 @@
 
 import { motion } from "framer-motion";
 
-import { PriorityLogo } from "@/components/brand/priority-logo";
 import { useLanguage } from "@/components/providers/language-provider";
 
 export function HeroNetwork() {
   const { copy } = useLanguage();
-  const modeCards = [
+  const orbitLabels = [
     {
-      label: copy.modes.items[0].title,
-      mode: "ocean",
-      className: "left-4 top-10 md:left-0 md:top-16",
+      label: copy.hero.visualLabels[0],
+      className: "left-3 top-12 sm:left-10 sm:top-16",
       delay: 0.2,
     },
     {
-      label: copy.modes.items[1].title,
-      mode: "air",
-      className: "right-4 top-8 md:right-0 md:top-10",
+      label: copy.hero.visualLabels[1],
+      className: "right-4 top-8 sm:right-12 sm:top-12",
       delay: 0.45,
     },
     {
-      label: copy.modes.items[2].title,
-      mode: "ground",
-      className: "bottom-8 right-10 md:bottom-10 md:right-8",
+      label: copy.hero.visualLabels[2],
+      className: "left-10 bottom-20 sm:left-16 sm:bottom-24",
       delay: 0.7,
     },
   ];
 
-  function ModeCard({ card, mobile = false }) {
-    return (
-      <motion.div
-        className={
-          mobile
-            ? "surface-dark px-4 py-3"
-            : `absolute ${card.className} surface-dark w-[190px] px-4 py-3 sm:w-[210px]`
-        }
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: [0, -6, 0] }}
-        transition={{
-          opacity: { duration: 0.5, delay: card.delay },
-          y: {
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: card.delay,
-          },
-        }}
-      >
-        <div className="flex items-center gap-3 text-white">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(128,0,32,0.36),rgba(179,58,91,0.14))]">
-            <PriorityLogo showWordmark={false} className="scale-[0.72]" />
-          </div>
-          <div className="min-w-0">
-            <p className="text-[0.65rem] uppercase tracking-[0.28em] text-white/55 sm:text-xs">
-              {copy.header.networkLayer}
-            </p>
-            <p className="text-base font-medium leading-7 text-white/92 sm:text-sm sm:leading-6">
-              {card.label}
-            </p>
-          </div>
-        </div>
-      </motion.div>
-    );
-  }
-
   return (
-    <div className="relative mx-auto w-full max-w-[560px] overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(13,31,60,0.96),rgba(8,20,40,0.98))] p-5 shadow-[0_40px_100px_rgba(4,10,22,0.45)] sm:p-6 md:aspect-[1.08] md:p-8">
+    <div className="relative mx-auto w-full max-w-[720px] overflow-hidden rounded-[34px] border border-white/10 bg-[linear-gradient(180deg,rgba(13,31,60,0.98),rgba(8,20,40,0.98))] p-5 shadow-[0_50px_120px_rgba(4,10,22,0.46)] sm:p-6 md:aspect-[1.04] md:p-8">
       <div className="absolute inset-0 bg-brand-grid opacity-50" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(179,58,91,0.24),transparent_38%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(179,58,91,0.28),transparent_34%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_84%,rgba(144,158,174,0.16),transparent_28%)]" />
+
+      <div className="absolute left-6 top-6 rounded-full border border-white/12 bg-white/[0.05] px-4 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-white/64 sm:left-8 sm:top-8">
+        {copy.hero.visualKicker}
+      </div>
+
+      <div className="absolute right-6 top-20 max-w-[220px] text-right sm:right-8 sm:top-24">
+        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/42 sm:text-xs sm:tracking-[0.28em]">
+          {copy.hero.visualNoteLabel}
+        </p>
+        <p className="mt-3 text-sm leading-6 text-white/72 sm:text-[0.98rem] sm:leading-7">
+          {copy.hero.visualNote}
+        </p>
+      </div>
+
       <motion.div
-        className="absolute left-1/2 top-[30%] h-[44%] w-[44%] -translate-x-1/2 rounded-full border border-white/10 md:left-auto md:top-auto md:h-[76%] md:w-[76%] md:translate-x-0"
+        className="absolute left-1/2 top-1/2 h-[72%] w-[72%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
         animate={{ rotate: 360 }}
         transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
       >
@@ -79,15 +53,15 @@ export function HeroNetwork() {
       </motion.div>
 
       <motion.div
-        className="absolute left-1/2 top-[30%] h-[33%] w-[33%] -translate-x-1/2 rounded-full border border-white/8 md:left-auto md:top-auto md:h-[58%] md:w-[58%] md:translate-x-0"
+        className="absolute left-1/2 top-1/2 h-[54%] w-[54%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/8"
         animate={{ rotate: -360 }}
         transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
       />
 
-      <div className="absolute inset-4 rounded-[28px] border border-white/5 md:inset-6 md:rounded-[30px]" />
+      <div className="absolute inset-4 rounded-[30px] border border-white/5 md:inset-6" />
 
-      <div className="relative z-10 flex h-[300px] w-full items-center justify-center sm:h-[360px] md:h-full">
-        <div className="relative flex aspect-square w-[88%] max-w-[320px] items-center justify-center rounded-full bg-[radial-gradient(circle_at_35%_30%,rgba(255,255,255,0.14),rgba(255,255,255,0.04)_40%,rgba(255,255,255,0.02)_70%,transparent_75%)] sm:max-w-[360px] md:w-[72%] md:max-w-none">
+      <div className="relative z-10 flex h-[360px] w-full items-center justify-center sm:h-[470px] md:h-full">
+        <div className="relative flex aspect-square w-[90%] max-w-[380px] items-center justify-center rounded-full bg-[radial-gradient(circle_at_35%_30%,rgba(255,255,255,0.16),rgba(255,255,255,0.05)_38%,rgba(255,255,255,0.02)_68%,transparent_74%)] sm:max-w-[430px] md:w-[74%] md:max-w-none">
           <motion.div
             className="absolute h-[86%] w-[86%] rounded-full border border-white/10"
             animate={{ scale: [1, 1.04, 1], opacity: [0.8, 1, 0.8] }}
@@ -183,15 +157,39 @@ export function HeroNetwork() {
         </div>
       </div>
 
-      <div className="relative z-10 mt-3 grid gap-3 md:hidden">
-        {modeCards.map((card) => (
-          <ModeCard key={card.label} card={card} mobile />
-        ))}
-      </div>
+      {orbitLabels.map((item) => (
+        <motion.div
+          key={item.label}
+          className={`absolute ${item.className} rounded-full border border-white/10 bg-[rgba(8,20,40,0.76)] px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/74 shadow-[0_14px_40px_rgba(2,8,20,0.28)] backdrop-blur`}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: [0, -6, 0] }}
+          transition={{
+            opacity: { duration: 0.5, delay: item.delay },
+            y: {
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: item.delay,
+            },
+          }}
+        >
+          {item.label}
+        </motion.div>
+      ))}
 
-      <div className="hidden md:block">
-        {modeCards.map((card) => (
-          <ModeCard key={card.label} card={card} />
+      <div className="relative z-10 mt-2 grid gap-3 sm:mt-4 sm:grid-cols-3">
+        {copy.hero.proofs.map((proof) => (
+          <div
+            key={proof.label}
+            className="rounded-[22px] border border-white/10 bg-white/[0.04] px-4 py-4 backdrop-blur sm:px-5"
+          >
+            <p className="text-[0.64rem] font-semibold uppercase tracking-[0.18em] text-white/46">
+              {proof.label}
+            </p>
+            <p className="mt-2 text-base font-semibold leading-6 text-white sm:text-lg">
+              {proof.value}
+            </p>
+          </div>
         ))}
       </div>
     </div>

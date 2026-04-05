@@ -12,212 +12,247 @@ const translations = {
   es: {
     locale: "es-MX",
     metaTitle:
-      "PRIORITY Freight Intelligence | Inteligencia logística para el comercio global",
+      "PRIORITY Freight Intelligence | Inteligencia logística para decisiones más inteligentes",
     metaDescription:
-      "PRIORITY combina experiencia logística, inteligencia de datos y tecnología moderna para optimizar el movimiento global de carga por aire, mar y tierra.",
+      "PRIORITY combina experiencia humana, asesoría estratégica y ejecución multimodal para optimizar operaciones logísticas entre México, Estados Unidos y Canadá.",
     brandSubtitle: "Inteligencia Logística",
     languageLabel: "Idioma",
     nav: {
       home: "Inicio",
-      whatWeDo: "Qué hacemos",
+      positioning: "Enfoque",
       services: "Servicios",
-      modes: "Modos de transporte",
-      technology: "Tecnología",
+      methodology: "Metodología",
+      impact: "Ventajas",
       presentation: "Presentacion de servicios",
+      presentationShort: "Presentacion",
       contact: "Contacto",
       quote: "Solicitar cotización",
       toggle: "Abrir navegación",
     },
     hero: {
-      eyebrow: "Plataforma de inteligencia logística",
-      title: "Inteligencia logística para el comercio global",
+      eyebrow: "PRIORITY Freight Intelligence",
+      title: "No solo movemos carga. Diseñamos decisiones logísticas más inteligentes.",
       description:
-        "PRIORITY combina experiencia logística, inteligencia de datos y tecnología moderna para optimizar el movimiento global de carga por aire, mar y tierra.",
-      primaryCta: "Comenzar embarque",
-      secondaryCta: "Solicitar cotización",
-      tagline: "MÁS INTELIGENTE • MEJOR • MÁS RÁPIDO",
+        "Combinamos experiencia humana, análisis operativo y ejecución multimodal para que importadores, exportadores y equipos de supply chain operen con más claridad, mejor criterio y una red más confiable.",
+      primaryCta: "Hablar con un asesor",
+      secondaryCta: "Ver presentación",
+      tagline: "SMARTER • BETTER • FASTER",
       signals: [
         {
-          title: "Visibilidad global",
-          copy: "Ve cada embarque como parte de una red logística conectada e impulsada por datos.",
+          title: "Asesoría real",
+          copy: "Analizamos la prioridad del embarque antes de recomendar una ruta, un modo o una tarifa.",
         },
         {
-          title: "Ruteo más inteligente",
-          copy: "Equilibra servicio, costo y timing con inteligencia aplicada en cada movimiento.",
+          title: "Visibilidad operativa",
+          copy: "Acompañamos la operación con seguimiento cercano, contexto y respuesta durante todo el trayecto.",
         },
         {
-          title: "Precisión operativa",
-          copy: "Coordina equipos, modos e hitos con una disciplina operativa moderna.",
+          title: "Cobertura estratégica",
+          copy: "Diseñado para operaciones entre México, Estados Unidos y Canadá con enfoque práctico y continuidad.",
         },
       ],
-    },
-    header: {
-      networkLayer: "Capa de red",
-      requestQuote: "Solicitar cotización",
-    },
-    whatWeDo: {
-      eyebrow: "Qué hacemos",
-      title: "Logística impulsada por inteligencia",
-      description:
-        "PRIORITY está hecho para importadores, exportadores y equipos operativos que buscan más que ejecución de embarques. Llevamos una mentalidad de producto al freight.",
-      pillars: [
-        {
-          title: "Freight global",
-          copy: "Transporte marítimo, aéreo y terrestre para cadenas de suministro internacionales que requieren velocidad, flexibilidad y confianza operativa.",
-        },
-        {
-          title: "Inteligencia logística",
-          copy: "Análisis impulsado por datos para optimizar costo, timing y ruteo en decisiones críticas de freight internacional.",
-        },
-        {
-          title: "Excelencia operativa",
-          copy: "Profesionales experimentados gestionando embarques complejos con el rigor, estructura y respuesta que esperan los equipos modernos.",
-        },
+      visualKicker: "Freight Intelligence Layer",
+      visualNoteLabel: "Punto de vista",
+      visualNote:
+        "Una operación internacional necesita criterio, servicio y timing. PRIORITY trabaja como una extensión del equipo del cliente.",
+      visualLabels: ["Ocean", "Ground", "Air"],
+      proofs: [
+        { label: "Cobertura foco", value: "MEX • USA • CAN" },
+        { label: "Modelo", value: "Asesoría antes de vender" },
+        { label: "Seguimiento", value: "Personalizado y continuo" },
       ],
+    },
+    positioning: {
+      eyebrow: "Posicionamiento",
+      title: "Una nueva generación de operador logístico.",
+      intro:
+        "PRIORITY Freight Intelligence no se presenta como un proveedor de transporte más. Nos posicionamos como un socio que entiende la operación del cliente, analiza su cadena de suministro y recomienda la mejor solución según la urgencia, el contexto y el objetivo real del embarque.",
+      body:
+        "El problema del freight tradicional es que suele reaccionar al movimiento. Nosotros partimos del análisis: qué necesita la operación, qué nivel de riesgo existe, qué impacto tiene el timing y qué configuración entrega más valor al cliente.",
+      highlight:
+        "Transportar es importante. Optimizar la operación del cliente es lo que realmente nos diferencia.",
+      pills: [
+        "Importadores y exportadores",
+        "Seguimiento personalizado",
+        "Cobertura Norteamérica",
+      ],
+      comparison: {
+        leftTitle: "Freight forwarding tradicional",
+        rightTitle: "PRIORITY Freight Intelligence",
+        leftItems: [
+          "Enfoque centrado en mover carga.",
+          "Servicio reactivo y menos consultivo.",
+          "Menor análisis estratégico previo a cotizar.",
+          "La conversación gira alrededor de tarifa y disponibilidad.",
+        ],
+        rightItems: [
+          "Analizamos la operación antes de proponer.",
+          "Asesoramos según la prioridad real del embarque.",
+          "Acompañamos con seguimiento cercano y criterio operativo.",
+          "Capacitamos, agregamos valor y mejoramos decisiones futuras.",
+        ],
+        quote:
+          "Tu operación necesita más que transporte. Necesita criterio, servicio y soluciones inteligentes.",
+      },
     },
     services: {
-      eyebrow: "Servicios",
-      title: "Soluciones logisticas presentadas con claridad visual.",
+      eyebrow: "Portafolio principal",
+      title: "Servicios construidos como solución, no solo como transporte.",
       description:
-        "Mostramos cada servicio con una ficha visual para que puedas identificar rapido su enfoque, cobertura y propuesta de valor.",
+        "Cada servicio se presenta con enfoque comercial y operativo para explicar con claridad dónde genera valor y cuándo conviene utilizarlo.",
+      sheetLabel: "Ficha visual",
+      carouselLabel: "Carrusel de servicios",
+      previous: "Anterior",
+      next: "Siguiente",
+      autoplay: "Rotación automática",
+      details: "Resumen",
+      focusLabel: "Enfoque PRIORITY",
+      fitLabel: "Ideal para",
+      regionLabel: "Cobertura",
+      solutionLabel: "Solución consultiva",
+      monitoringLabel: "Seguimiento cercano",
       items: [
         {
           code: "LCL",
-          title: "Consolidado Maritimo",
-          subtitle: "Carga parcial maritima con mejor control de costo y visibilidad.",
-          alt: "Ficha visual del servicio consolidado maritimo LCL.",
+          title: "Consolidado Marítimo",
+          subtitle: "Eficiencia de costo para cargas que no requieren contenedor completo.",
+          detail:
+            "Analizamos la naturaleza del embarque, los tiempos requeridos y la frecuencia de operación para que el consolidado sea una ventaja y no una limitante.",
+          fit: "Importaciones y exportaciones recurrentes con foco en eficiencia.",
+          region: "Rutas marítimas internacionales con integración inland.",
+          alt: "Ficha visual del servicio consolidado marítimo LCL.",
         },
         {
           code: "LTL",
-          title: "Consolidado Terrestre",
-          subtitle: "Movimiento transfronterizo flexible para cargas parciales.",
+          title: "Consolidado Terrestre MEX-USA-CAN",
+          subtitle: "Movimiento transfronterizo flexible para cargas parciales con control operativo.",
+          detail:
+            "Revisamos urgencia, ventana de entrega, perfil del cliente y condiciones de la mercancía para recomendar la mejor configuración terrestre compartida.",
+          fit: "Operaciones frecuentes con volumen intermedio y necesidad de flexibilidad.",
+          region: "México, Estados Unidos y Canadá.",
           alt: "Ficha visual del servicio consolidado terrestre LTL.",
         },
         {
           code: "FTL",
           title: "Transporte Dedicado FTL",
-          subtitle: "Capacidad completa para operaciones criticas entre MEX, USA y CAN.",
+          subtitle: "Capacidad completa para embarques críticos, sensibles o de mayor volumen.",
+          detail:
+            "Recomendamos FTL cuando la operación justifica velocidad, menor manipulación y mayor control sobre la continuidad de la cadena.",
+          fit: "Embarques urgentes, sensibles o con requerimientos dedicados.",
+          region: "México, Estados Unidos y Canadá.",
           alt: "Ficha visual del servicio terrestre FTL.",
         },
         {
           code: "DRAYAGE",
           title: "Arrastre de Contenedores",
-          subtitle: "Continuidad portuaria y terrestre con coordinacion dedicada.",
+          subtitle: "Continuidad entre puerto, terminal, almacén y destino final con coordinación dedicada.",
+          detail:
+            "Monitoreamos hitos críticos para evitar cuellos de botella y asegurar que la operación portuaria mantenga ritmo y visibilidad.",
+          fit: "Operaciones marítimas que necesitan control puntual en sus enlaces terrestres.",
+          region: "Puertos, terminales, almacenes y destino final.",
           alt: "Ficha visual del servicio de arrastre de contenedores.",
         },
         {
           code: "AIR",
-          title: "Carga Aerea",
-          subtitle: "Respuesta premium para embarques urgentes y sensibles.",
-          alt: "Ficha visual del servicio de carga aerea.",
+          title: "Carga Aérea",
+          subtitle: "Respuesta premium para embarques urgentes o de alto valor.",
+          detail:
+            "Evaluamos si la carga aérea realmente aporta la mejor decisión en términos de impacto, costo y prioridad comercial del embarque.",
+          fit: "Urgencias, mercancía sensible y operaciones donde el tiempo cambia el resultado.",
+          region: "Rutas aéreas internacionales con coordinación dedicada.",
+          alt: "Ficha visual del servicio de carga aérea.",
         },
       ],
     },
-    modes: {
-      eyebrow: "Modos de transporte",
-      title: "Ejecución multimodal con una experiencia premium de producto.",
+    methodology: {
+      eyebrow: "Cómo trabajamos",
+      title: "Una metodología que mezcla análisis, ejecución y mejora continua.",
       description:
-        "Cada modo vive dentro del mismo sistema operativo: visibilidad clara, mejor inteligencia de ruteo y ejecución disciplinada.",
-      kicker: "Inteligencia por modo",
-      items: [
+        "Nuestro modelo no termina cuando sale una unidad o se embarca un contenedor. Empezamos entendiendo la operación, ejecutamos con disciplina y regresamos con recomendaciones para operar mejor la siguiente vez.",
+      note:
+        "La meta es simple: que el cliente no solo resuelva un movimiento, sino que fortalezca su operación con cada embarque.",
+      outcomes: [
         {
-          title: "Freight marítimo",
-          copy: "Control estratégico para carga contenerizada con visibilidad a lo largo de las principales rutas globales.",
+          title: "Diagnóstico",
+          copy: "Evaluamos urgencia, costo, timing, riesgo y objetivo comercial antes de definir la solución.",
         },
         {
-          title: "Freight aéreo",
-          copy: "Ruteo prioritario para movimientos sensibles al tiempo donde la velocidad y la respuesta operativa son clave.",
+          title: "Ejecución",
+          copy: "Coordinamos la operación con visibilidad, comunicación clara y seguimiento personalizado.",
         },
         {
-          title: "Transporte terrestre",
-          copy: "Coordinación inland confiable que conecta puertos, aeropuertos, almacenes y puntos finales de entrega.",
+          title: "Mejora",
+          copy: "Identificamos oportunidades para optimizar futuras decisiones logísticas y reducir fricción operativa.",
         },
+      ],
+      steps: [
+        {
+          title: "Entendemos la operación",
+          copy: "Analizamos el contexto del cliente, la importancia del embarque y la estructura de su cadena de suministro antes de cotizar o mover una unidad.",
+        },
+        {
+          title: "Diagnosticamos la mejor alternativa",
+          copy: "Comparamos modo, costo, tiempo de tránsito y nivel de riesgo para recomendar la solución que realmente conviene.",
+        },
+        {
+          title: "Ejecutamos con visibilidad y servicio",
+          copy: "Damos seguimiento cercano, soporte continuo y comunicación clara durante toda la operación para reducir incertidumbre.",
+        },
+        {
+          title: "Aportamos mejora continua",
+          copy: "Capacitamos, asesoramos y detectamos oportunidades para que la siguiente operación sea más eficiente que la anterior.",
+        },
+      ],
+      extraServices: [
+        "Seguro de carga",
+        "Capacitaciones gratuitas",
+        "Búsqueda de proveedores por fracción arancelaria",
+        "Soporte estratégico continuo",
       ],
     },
-    why: {
-      eyebrow: "Por qué PRIORITY",
-      title: "No somos un freight forwarder tradicional",
+    impact: {
+      eyebrow: "Beneficios para el cliente",
+      title: "Convertimos la logística en una ventaja competitiva.",
       description:
-        "PRIORITY se posiciona como una plataforma de inteligencia logística. La diferencia está en cómo se toman, muestran y mejoran las decisiones con el tiempo.",
-      panelTitle: "Punto de vista de plataforma",
-      panelLines: [
-        "Una capa operativa moderna para el freight global.",
-        "Experiencia humana fortalecida por sistemas digitales.",
-        "Pensado para equipos que quieren control, no ruido.",
-      ],
-      features: [
-        {
-          title: "Inteligencia logística",
-          copy: "Convierte las operaciones de freight en una corriente de insights, no solo en actualizaciones transaccionales.",
-        },
-        {
-          title: "Visibilidad global",
-          copy: "Da seguimiento a estatus, cambios de hitos e incidencias en rutas internacionales desde una sola vista.",
-        },
-        {
-          title: "Ruteo optimizado",
-          copy: "Toma decisiones de modo y ruta con más contexto sobre servicio, timing y costo.",
-        },
-        {
-          title: "Operaciones impulsadas por tecnología",
-          copy: "Apoya a equipos expertos de freight con workflows, automatización y sistemas operativos.",
-        },
-      ],
-    },
-    benefits: {
-      eyebrow: "Beneficios",
-      title: "Una experiencia de freight más limpia para equipos operativos modernos.",
-      description:
-        "El resultado es simple: más claridad, más confianza y mejor desempeño operativo en logística internacional.",
-      items: [
+        "Cuando la operación tiene criterio, visibilidad y servicio, el freight deja de ser una fricción y empieza a convertirse en una plataforma de crecimiento.",
+      quote:
+        "No solo movemos carga. Ayudamos a que el cliente opere mejor.",
+      benefits: [
         {
           title: "Mejor visibilidad",
-          copy: "Haz visible el movimiento de embarques, cambios de hitos y contexto operativo sin depender de actualizaciones fragmentadas.",
+          copy: "Más contexto sobre hitos, cambios y decisiones relevantes para que el equipo del cliente tenga claridad operativa.",
         },
         {
-          title: "Costos optimizados",
-          copy: "Mejora la economía logística eligiendo mejores combinaciones de modo, ruta y timing.",
+          title: "Optimización de rutas y costos",
+          copy: "Mejores combinaciones de modo, prioridad y timing para balancear servicio y rentabilidad.",
         },
         {
-          title: "Tránsito más rápido",
-          copy: "Reduce demoras evitables con mejor coordinación y ciclos de respuesta operativa más ágiles.",
+          title: "Mayor confianza operativa",
+          copy: "Procesos más estables, seguimiento cercano y menos dependencia de reacciones de último minuto.",
         },
         {
-          title: "Soporte dedicado",
-          copy: "Combina operaciones guiadas por tecnología con especialistas que entienden embarques complejos.",
+          title: "Soporte consultivo",
+          copy: "Un equipo que asesora, responde y acompaña, en lugar de limitarse a ejecutar movimientos.",
         },
       ],
-    },
-    technology: {
-      eyebrow: "Tecnología",
-      title: "La tecnología se encuentra con la logística",
-      description:
-        "La experiencia de producto está diseñada para sentirse como una plataforma SaaS, sin perder de vista la realidad operativa del freight global.",
-      blocks: [
-        {
-          title: "Inteligencia de datos",
-          body: "Convierte señales tarifarias, restricciones de ruteo y contexto operativo en decisiones mejor informadas.",
-        },
-        {
-          title: "Sistemas operativos",
-          body: "Da estructura a la ejecución con workflows compartidos que sostienen consistencia entre equipos y embarques.",
-        },
-        {
-          title: "Plataformas de visibilidad",
-          body: "Crea una experiencia logística más transparente con conciencia de hitos y supervisión orientada a incidencias.",
-        },
+      extraTitle: "Valor agregado",
+      extras: [
+        "Capacitaciones",
+        "Análisis estratégico",
+        "Seguimiento personalizado",
+        "Criterio operativo",
       ],
     },
     cta: {
-      eyebrow: "Llamado a la acción",
-      title: "Mueve carga de forma más inteligente",
+      eyebrow: "Contacto",
+      title: "Hablemos de tu operación y propongamos la mejor solución.",
       description:
-        "PRIORITY está hecho para empresas que quieren más que forwarding. Es para equipos que esperan tecnología, inteligencia y una ejecución operativa premium.",
+        "Si tu empresa necesita más visibilidad, mejor acompañamiento y decisiones logísticas más inteligentes, PRIORITY está listo para ayudarte.",
       connectLine:
-        "Habla con ventas u operaciones por telefono, correo o WhatsApp segun el tipo de apoyo que necesites.",
+        "Comunícate con ventas o con operaciones por teléfono, correo o WhatsApp según el tipo de apoyo que necesites.",
       sales: "Ventas",
       office: "Oficina",
-      phoneLabel: "Telefono",
+      phoneLabel: "Teléfono",
       emailLabel: "Correo",
       whatsapp: "WhatsApp",
       presentation: "Presentacion de servicios",
@@ -225,11 +260,11 @@ const translations = {
     },
     footer: {
       description:
-        "Una plataforma moderna de inteligencia logística para equipos de freight global que esperan más visibilidad, más control y mejores decisiones.",
-      whatWeDo: "Qué hacemos",
+        "Inteligencia logística para empresas que necesitan criterio, visibilidad y una operación más confiable entre México, Estados Unidos y Canadá.",
+      positioning: "Enfoque",
       services: "Servicios",
-      modes: "Modos de transporte",
-      technology: "Tecnología",
+      methodology: "Metodología",
+      impact: "Ventajas",
       presentation: "Presentacion",
       contact: "Contacto",
     },
@@ -237,209 +272,243 @@ const translations = {
   en: {
     locale: "en",
     metaTitle:
-      "PRIORITY Freight Intelligence | Freight intelligence for global trade",
+      "PRIORITY Freight Intelligence | Logistics intelligence for smarter decisions",
     metaDescription:
-      "PRIORITY combines logistics expertise, data intelligence and modern technology to optimize global freight movement across air, ocean and land.",
+      "PRIORITY combines human expertise, strategic advisory and multimodal execution to optimize freight operations across Mexico, the United States and Canada.",
     brandSubtitle: "Freight Intelligence",
     languageLabel: "Language",
     nav: {
       home: "Home",
-      whatWeDo: "What We Do",
+      positioning: "Approach",
       services: "Services",
-      modes: "Transport Modes",
-      technology: "Technology",
+      methodology: "Methodology",
+      impact: "Benefits",
       presentation: "Services Presentation",
+      presentationShort: "Presentation",
       contact: "Contact",
       quote: "Request Quote",
       toggle: "Toggle navigation",
     },
     hero: {
-      eyebrow: "Logistics Intelligence Platform",
-      title: "Freight Intelligence for Global Trade",
+      eyebrow: "PRIORITY Freight Intelligence",
+      title: "We do more than move freight. We design smarter logistics decisions.",
       description:
-        "PRIORITY combines logistics expertise, data intelligence and modern technology to optimize global freight movement across air, ocean and land.",
-      primaryCta: "Start Shipping",
-      secondaryCta: "Request Quote",
+        "We combine human expertise, operational analysis and multimodal execution so importers, exporters and supply chain teams can operate with more clarity, better judgment and a more reliable network.",
+      primaryCta: "Talk to an advisor",
+      secondaryCta: "View presentation",
       tagline: "SMARTER • BETTER • FASTER",
       signals: [
         {
-          title: "Global Visibility",
-          copy: "See every shipment as part of a connected, data-aware logistics network.",
+          title: "Real advisory",
+          copy: "We evaluate shipment priority before recommending a route, a mode or a quote.",
         },
         {
-          title: "Smarter Routing",
-          copy: "Balance service, cost and timing with intelligence layered into every move.",
+          title: "Operational visibility",
+          copy: "We stay close to the move with context, follow-through and responsive support across the trip.",
         },
         {
-          title: "Operational Precision",
-          copy: "Coordinate teams, modes and milestones with modern workflow discipline.",
+          title: "Strategic coverage",
+          copy: "Built for operations across Mexico, the United States and Canada with practical continuity.",
         },
       ],
-    },
-    header: {
-      networkLayer: "Network Layer",
-      requestQuote: "Request Quote",
-    },
-    whatWeDo: {
-      eyebrow: "What We Do",
-      title: "Logistics Powered by Intelligence",
-      description:
-        "PRIORITY is built for importers, exporters and operations teams that want more than shipment execution. We bring a product mindset to freight.",
-      pillars: [
-        {
-          title: "Global Freight",
-          copy: "Ocean, air and land transportation for international supply chains that need speed, flexibility and execution confidence.",
-        },
-        {
-          title: "Logistics Intelligence",
-          copy: "Data driven analysis to optimize cost, timing, and routing across high-value international freight decisions.",
-        },
-        {
-          title: "Operational Excellence",
-          copy: "Experienced professionals managing complex shipments with the rigor, structure and responsiveness modern teams expect.",
-        },
+      visualKicker: "Freight Intelligence Layer",
+      visualNoteLabel: "Point of view",
+      visualNote:
+        "An international operation needs judgment, service and timing. PRIORITY works like an extension of the client team.",
+      visualLabels: ["Ocean", "Ground", "Air"],
+      proofs: [
+        { label: "Core coverage", value: "MEX • USA • CAN" },
+        { label: "Model", value: "Advise before selling" },
+        { label: "Follow-up", value: "Personalized and continuous" },
       ],
+    },
+    positioning: {
+      eyebrow: "Positioning",
+      title: "A new generation logistics operator.",
+      intro:
+        "PRIORITY Freight Intelligence is not introduced as just another transportation provider. We position ourselves as a partner that understands the client operation, analyzes the supply chain and recommends the best solution based on urgency, context and the real objective behind the shipment.",
+      body:
+        "The problem with traditional forwarding is that it often reacts to movement. We start with analysis: what the operation really needs, what level of risk exists, how timing changes the outcome and which setup creates the most value.",
+      highlight:
+        "Transport matters. Improving the client operation is what truly sets us apart.",
+      pills: [
+        "Importers and exporters",
+        "Personalized follow-up",
+        "North America coverage",
+      ],
+      comparison: {
+        leftTitle: "Traditional freight forwarding",
+        rightTitle: "PRIORITY Freight Intelligence",
+        leftItems: [
+          "Focused on moving freight.",
+          "More reactive than consultative.",
+          "Less strategic analysis before quoting.",
+          "The conversation revolves around rate and availability.",
+        ],
+        rightItems: [
+          "We analyze the operation before proposing.",
+          "We advise according to the real priority of the shipment.",
+          "We stay close with follow-through and operating judgment.",
+          "We train, add value and improve future decisions.",
+        ],
+        quote:
+          "Your operation needs more than transportation. It needs judgment, service and intelligent solutions.",
+      },
     },
     services: {
-      eyebrow: "Services",
-      title: "Logistics solutions presented in a more visual, premium format.",
+      eyebrow: "Core portfolio",
+      title: "Services built as solutions, not just transportation modes.",
       description:
-        "Each service is shown as a visual product sheet so teams can quickly understand scope, coverage and operational value.",
+        "Each service is framed from both a commercial and operational perspective so teams can quickly understand where it creates value and when it makes sense to use it.",
+      sheetLabel: "Visual sheet",
+      carouselLabel: "Services carousel",
+      previous: "Previous",
+      next: "Next",
+      autoplay: "Autoplay rotation",
+      details: "Summary",
+      focusLabel: "PRIORITY approach",
+      fitLabel: "Best fit",
+      regionLabel: "Coverage",
+      solutionLabel: "Consultative solution",
+      monitoringLabel: "Close follow-up",
       items: [
         {
           code: "LCL",
           title: "Ocean Consolidation",
-          subtitle: "Partial ocean freight with stronger cost control and visibility.",
+          subtitle: "Cost efficiency for freight that does not require a full container.",
+          detail:
+            "We assess shipment nature, timing requirements and operating frequency so consolidation becomes an advantage instead of a constraint.",
+          fit: "Recurring import and export programs focused on efficiency.",
+          region: "International ocean lanes with inland integration.",
           alt: "Visual service sheet for ocean consolidation LCL.",
         },
         {
           code: "LTL",
-          title: "Ground Consolidation",
-          subtitle: "Flexible cross-border movement for partial truckload freight.",
+          title: "Ground Consolidation MEX-USA-CAN",
+          subtitle: "Flexible cross-border movement for partial freight with operating control.",
+          detail:
+            "We review urgency, delivery window, client profile and cargo conditions to recommend the right shared ground setup.",
+          fit: "Frequent operations with mid-volume freight and flexibility needs.",
+          region: "Mexico, United States and Canada.",
           alt: "Visual service sheet for cross-border LTL freight.",
         },
         {
           code: "FTL",
           title: "Dedicated FTL",
-          subtitle: "Full-capacity transportation for critical moves across North America.",
+          subtitle: "Full capacity for critical, sensitive or higher-volume shipments.",
+          detail:
+            "We recommend FTL when the operation truly requires speed, less handling and tighter continuity across the chain.",
+          fit: "Urgent, sensitive or dedicated-capacity shipments.",
+          region: "Mexico, United States and Canada.",
           alt: "Visual service sheet for full truckload FTL service.",
         },
         {
           code: "DRAYAGE",
           title: "Container Drayage",
-          subtitle: "Dedicated port-to-destination continuity with tighter coordination.",
+          subtitle: "Continuity from port and terminal to warehouse and final destination.",
+          detail:
+            "We monitor critical milestones to avoid bottlenecks and make sure port-side execution keeps pace and visibility.",
+          fit: "Ocean operations that need tighter control across inland links.",
+          region: "Ports, terminals, warehouses and final destination.",
           alt: "Visual service sheet for container drayage.",
         },
         {
           code: "AIR",
           title: "Air Freight",
-          subtitle: "Premium response for urgent and sensitive shipments.",
+          subtitle: "Premium response for urgent or high-value shipments.",
+          detail:
+            "We evaluate whether air freight is truly the best decision in terms of impact, cost and shipment priority.",
+          fit: "Urgent, sensitive or time-critical commercial moves.",
+          region: "International air lanes with dedicated coordination.",
           alt: "Visual service sheet for air freight service.",
         },
       ],
     },
-    modes: {
-      eyebrow: "Transport Modes",
-      title: "Multimodal freight execution with a premium product feel.",
+    methodology: {
+      eyebrow: "How we work",
+      title: "A methodology built on analysis, execution and continuous improvement.",
       description:
-        "Every mode lives inside the same operating system: clear visibility, better routing intelligence, and disciplined execution.",
-      kicker: "Mode Intelligence",
-      items: [
+        "Our model does not end when a truck departs or a container is booked. We begin by understanding the operation, execute with discipline and come back with recommendations for the next move.",
+      note:
+        "The goal is simple: the client should not just solve one shipment, but strengthen the whole operation every time.",
+      outcomes: [
         {
-          title: "Ocean Freight",
-          copy: "Strategic control for containerized freight with visibility across major global trade lanes.",
+          title: "Diagnosis",
+          copy: "We evaluate urgency, cost, timing, risk and business objective before defining the solution.",
         },
         {
-          title: "Air Freight",
-          copy: "Priority routing for time-sensitive moves where speed and responsive execution matter most.",
+          title: "Execution",
+          copy: "We coordinate the move with visibility, clear communication and close operational follow-up.",
         },
         {
-          title: "Ground Transportation",
-          copy: "Reliable inland coordination that connects ports, airports, warehouses and final delivery points.",
+          title: "Improvement",
+          copy: "We identify opportunities to optimize future decisions and remove operating friction over time.",
         },
+      ],
+      steps: [
+        {
+          title: "We understand the operation",
+          copy: "We analyze client context, shipment importance and supply chain structure before quoting or dispatching a unit.",
+        },
+        {
+          title: "We diagnose the best alternative",
+          copy: "We compare mode, cost, transit time and risk level to recommend the option that truly fits.",
+        },
+        {
+          title: "We execute with visibility and service",
+          copy: "We provide close follow-through, continuous support and clear communication throughout the move to reduce uncertainty.",
+        },
+        {
+          title: "We bring continuous improvement",
+          copy: "We train, advise and surface new opportunities so the next shipment runs better than the last one.",
+        },
+      ],
+      extraServices: [
+        "Cargo insurance",
+        "Free training",
+        "Tariff-based supplier sourcing",
+        "Strategic ongoing support",
       ],
     },
-    why: {
-      eyebrow: "Why PRIORITY",
-      title: "Not Your Traditional Freight Forwarder",
+    impact: {
+      eyebrow: "Client benefits",
+      title: "We turn logistics into a competitive advantage.",
       description:
-        "PRIORITY is positioned as a logistics intelligence platform. The difference is in how decisions are made, surfaced and improved over time.",
-      panelTitle: "Platform Point of View",
-      panelLines: [
-        "A modern operating layer for global freight.",
-        "Human expertise strengthened by digital systems.",
-        "Built for teams that want control, not noise.",
-      ],
-      features: [
+        "When operations have judgment, visibility and service, freight stops being a friction point and starts becoming a growth platform.",
+      quote: "We do more than move freight. We help clients operate better.",
+      benefits: [
         {
-          title: "Logistics Intelligence",
-          copy: "Transform freight operations into a stream of insights, not just transactional updates.",
+          title: "Better visibility",
+          copy: "More context around milestones, changes and relevant decisions so client teams can operate with clarity.",
         },
         {
-          title: "Global Visibility",
-          copy: "Track status, milestone shifts and exceptions across international lanes in one view.",
+          title: "Route and cost optimization",
+          copy: "Better combinations of mode, priority and timing to balance service quality with freight economics.",
         },
         {
-          title: "Optimized Routing",
-          copy: "Make mode and route decisions with more context around service, timing and cost.",
+          title: "Higher operating confidence",
+          copy: "More stable processes, close follow-up and less dependence on last-minute reactions.",
         },
         {
-          title: "Technology Driven Operations",
-          copy: "Support experienced freight teams with workflows, automation and operational systems.",
+          title: "Consultative support",
+          copy: "A team that advises, responds and stays involved instead of simply moving freight from point A to B.",
         },
       ],
-    },
-    benefits: {
-      eyebrow: "Benefits",
-      title: "A cleaner freight experience for modern operations teams.",
-      description:
-        "The outcome is simple: more clarity, more confidence and better operating performance across international logistics.",
-      items: [
-        {
-          title: "Better Visibility",
-          copy: "Surface shipment movement, milestone changes and operational context without relying on fragmented updates.",
-        },
-        {
-          title: "Optimized Costs",
-          copy: "Improve freight economics by choosing better combinations of mode, route and timing.",
-        },
-        {
-          title: "Faster Transit",
-          copy: "Reduce avoidable delays with tighter coordination and faster operational response loops.",
-        },
-        {
-          title: "Dedicated Support",
-          copy: "Pair technology-driven operations with experienced specialists who understand complex shipments.",
-        },
-      ],
-    },
-    technology: {
-      eyebrow: "Technology",
-      title: "Technology Meets Logistics",
-      description:
-        "The product experience is designed to feel like a SaaS platform, while still respecting the realities of global freight operations.",
-      blocks: [
-        {
-          title: "Data Intelligence",
-          body: "Turn rate signals, routing constraints and shipment context into more informed decisions.",
-        },
-        {
-          title: "Operational Systems",
-          body: "Bring structure to execution with shared workflows that support consistency across teams and shipments.",
-        },
-        {
-          title: "Visibility Platforms",
-          body: "Create a more transparent logistics experience with milestone awareness and exception-oriented oversight.",
-        },
+      extraTitle: "Added value",
+      extras: [
+        "Training",
+        "Strategic analysis",
+        "Personalized follow-up",
+        "Operational judgment",
       ],
     },
     cta: {
-      eyebrow: "Call To Action",
-      title: "Move Freight Smarter",
+      eyebrow: "Contact",
+      title: "Let’s review your operation and propose the right solution.",
       description:
-        "PRIORITY is built for businesses that want more than forwarding. It is for teams that expect technology, intelligence and premium operational execution.",
+        "If your business needs better visibility, stronger follow-through and smarter logistics decisions, PRIORITY is ready to help.",
       connectLine:
-        "Reach our sales or operations team by phone, email, or WhatsApp depending on the support you need.",
+        "Reach our sales or operations team by phone, email or WhatsApp depending on the kind of support you need.",
       sales: "Sales",
       office: "Office",
       phoneLabel: "Phone",
@@ -450,11 +519,11 @@ const translations = {
     },
     footer: {
       description:
-        "A modern logistics intelligence platform for global freight teams that expect more visibility, more control, and better decisions.",
-      whatWeDo: "What We Do",
+        "Logistics intelligence for companies that need judgment, visibility and more reliable operations across Mexico, the United States and Canada.",
+      positioning: "Approach",
       services: "Services",
-      modes: "Transport Modes",
-      technology: "Technology",
+      methodology: "Methodology",
+      impact: "Benefits",
       presentation: "Presentation",
       contact: "Contact",
     },

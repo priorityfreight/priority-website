@@ -21,9 +21,10 @@ export function SiteFooter() {
           </div>
 
           <div className="flex flex-wrap gap-x-5 gap-y-3 text-sm text-white/68">
-            <Link href="#what-we-do">{copy.footer.whatWeDo}</Link>
+            <Link href="#positioning">{copy.footer.positioning}</Link>
             <Link href="#services">{copy.footer.services}</Link>
-            <Link href="#technology">{copy.footer.technology}</Link>
+            <Link href="#methodology">{copy.footer.methodology}</Link>
+            <Link href="#impact">{copy.footer.impact}</Link>
             <Link href="/presentacion">{copy.footer.presentation}</Link>
             <Link href="#contact">{copy.footer.contact}</Link>
           </div>

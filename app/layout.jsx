@@ -1,6 +1,20 @@
+import { Manrope, Space_Grotesk } from "next/font/google";
+
 import { LanguageProvider } from "@/components/providers/language-provider";
 import "@/styles/theme.css";
 import "./globals.css";
+
+const sans = Manrope({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const display = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 export const metadata = {
   title: "PRIORITY Freight Intelligence | Bilingual Logistics Intelligence Platform",
@@ -11,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es-MX" className="scroll-smooth">
-      <body className="font-sans antialiased">
+      <body className={`${sans.variable} ${display.variable} font-sans antialiased`}>
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

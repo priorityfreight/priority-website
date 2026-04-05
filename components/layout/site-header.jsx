@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import { useLanguage } from "@/components/providers/language-provider";
@@ -14,12 +14,21 @@ export function SiteHeader() {
   const { copy } = useLanguage();
   const navigation = [
     { label: copy.nav.home, href: "#home" },
-    { label: copy.nav.whatWeDo, href: "#what-we-do" },
+    { label: copy.nav.positioning, href: "#positioning" },
     { label: copy.nav.services, href: "#services" },
-    { label: copy.nav.technology, href: "#technology" },
+    { label: copy.nav.methodology, href: "#methodology" },
+    { label: copy.nav.impact, href: "#impact" },
     { label: copy.nav.presentation, href: "/presentacion" },
     { label: copy.nav.contact, href: "#contact" },
   ];
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <header className="sticky top-0 z-50 pt-3 sm:pt-4">
@@ -49,14 +58,14 @@ export function SiteHeader() {
             </button>
           </div>
 
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-5 xl:gap-7 lg:flex">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-white/75 transition hover:text-white"
+                className="text-[0.92rem] text-white/75 transition hover:text-white xl:text-sm"
               >
-                {item.label}
+                {item.href === "/presentacion" ? copy.nav.presentationShort : item.label}
               </Link>
             ))}
           </nav>
@@ -67,31 +76,45 @@ export function SiteHeader() {
             </Button>
           </div>
 
-          <div
-            className={`absolute left-0 right-0 top-[calc(100%+10px)] overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(7,21,44,0.96)] p-3 shadow-[0_24px_48px_rgba(2,8,20,0.28)] backdrop-blur-xl transition-all duration-200 sm:top-[calc(100%+12px)] sm:rounded-[28px] sm:p-4 lg:hidden ${
-              isOpen
-                ? "visible translate-y-0 opacity-100"
-                : "invisible -translate-y-3 opacity-0"
-            }`}
-          >
-            <nav className="flex flex-col gap-2">
-              <div className="mb-2 px-2">
-                <LanguageToggle />
-              </div>
-              {navigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-2xl px-4 py-3 text-sm text-white/80 transition hover:bg-white/5 hover:text-white"
+          <div className="lg:hidden">
+            <div
+              className={`fixed inset-0 z-40 bg-[rgba(7,21,44,0.82)] backdrop-blur-sm transition duration-200 ${
+                isOpen ? "visible opacity-100" : "invisible opacity-0"
+              }`}
+              onClick={() => setIsOpen(false)}
+            />
+
+            <div
+              className={`fixed inset-x-4 top-[5.6rem] z-50 max-h-[calc(100vh-7rem)] overflow-y-auto rounded-[28px] border border-white/10 bg-[rgba(7,21,44,0.98)] p-4 shadow-[0_24px_48px_rgba(2,8,20,0.36)] backdrop-blur-xl transition-all duration-200 ${
+                isOpen
+                  ? "visible translate-y-0 opacity-100"
+                  : "invisible -translate-y-3 opacity-0"
+              }`}
+            >
+              <nav className="flex flex-col gap-2">
+                <div className="mb-2 px-2">
+                  <LanguageToggle />
+                </div>
+                {navigation.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="rounded-2xl px-4 py-3 text-sm text-white/80 transition hover:bg-white/5 hover:text-white"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <Button
+                  href="#contact"
+                  variant="secondary"
+                  className="mt-2 w-full"
                   onClick={() => setIsOpen(false)}
                 >
-                  {item.label}
-                </Link>
-              ))}
-              <Button href="#contact" variant="secondary" className="mt-2 w-full">
-                {copy.nav.quote}
-              </Button>
-            </nav>
+                  {copy.nav.quote}
+                </Button>
+              </nav>
+            </div>
           </div>
         </div>
       </Container>

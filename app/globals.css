@@ -14,11 +14,13 @@
 
   body {
     background:
-      radial-gradient(circle at top left, rgba(179, 58, 91, 0.16), transparent 26%),
-      radial-gradient(circle at 85% 18%, rgba(144, 158, 174, 0.12), transparent 22%),
-      linear-gradient(180deg, #07152c 0%, #0b1f3b 58%, #08172e 100%);
+      radial-gradient(circle at 12% 12%, rgba(179, 58, 91, 0.22), transparent 26%),
+      radial-gradient(circle at 88% 14%, rgba(144, 158, 174, 0.16), transparent 24%),
+      radial-gradient(circle at 50% 58%, rgba(128, 0, 32, 0.08), transparent 34%),
+      linear-gradient(180deg, #051224 0%, #08182f 38%, #08172e 100%);
     color: var(--color-light);
     overflow-x: hidden;
+    font-feature-settings: "ss01" 1, "ss03" 1, "cv11" 1;
   }
 
   ::selection {
@@ -34,6 +36,10 @@
 
   .surface-dark {
     @apply rounded-[32px] border border-white/10 bg-white/[0.06] shadow-glow backdrop-blur;
+  }
+
+  .surface-line {
+    @apply border-y border-white/10 bg-white/[0.03] backdrop-blur;
   }
 
   .section-padding {
@@ -57,5 +63,9 @@
 
   .grid-fade {
     mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+  }
+
+  .text-shadow-soft {
+    text-shadow: 0 10px 36px rgba(2, 8, 20, 0.3);
   }
 }

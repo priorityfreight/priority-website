@@ -20,7 +20,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
         panel: "0 24px 80px rgba(3, 10, 24, 0.24)",
