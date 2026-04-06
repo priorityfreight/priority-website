@@ -12,6 +12,11 @@
     min-height: 100%;
   }
 
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
   body {
     background:
       radial-gradient(circle at 12% 12%, rgba(179, 58, 91, 0.22), transparent 26%),
@@ -21,6 +26,32 @@
     color: var(--color-light);
     overflow-x: hidden;
     font-feature-settings: "ss01" 1, "ss03" 1, "cv11" 1;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(4, 10, 22, 0.08), rgba(4, 10, 22, 0)),
+      radial-gradient(circle at top, rgba(179, 58, 91, 0.08), transparent 40%);
+    z-index: 0;
+  }
+
+  [id] {
+    scroll-margin-top: 6.5rem;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(8, 24, 47, 0.9), 0 0 0 4px rgba(179, 58, 91, 0.72);
   }
 
   ::selection {
@@ -43,11 +74,11 @@
   }
 
   .section-padding {
-    @apply py-16 sm:py-24 lg:py-28;
+    @apply py-20 sm:py-28 lg:py-32;
   }
 
   .section-label {
-    @apply inline-flex items-center gap-2 text-[0.64rem] font-semibold uppercase tracking-[0.26em] sm:gap-3 sm:text-[0.72rem] sm:tracking-[0.34em];
+    @apply inline-flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.24em] sm:gap-3 sm:text-[0.7rem] sm:tracking-[0.32em];
   }
 
   .section-label::before {

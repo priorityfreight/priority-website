@@ -9,68 +9,60 @@ export function ImpactSection() {
 
   return (
     <section id="impact" className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 bg-soft-grid opacity-55" />
-      <div className="absolute left-[10%] top-12 h-44 w-44 rounded-full bg-[radial-gradient(circle,rgba(179,58,91,0.28),transparent_70%)] blur-2xl" />
+      <div className="absolute left-[10%] top-12 h-44 w-44 rounded-full bg-[radial-gradient(circle,rgba(179,58,91,0.24),transparent_70%)] blur-2xl" />
 
       <Container className="relative z-10">
-        <Reveal>
-          <div className="overflow-hidden rounded-[34px] border border-white/10 bg-[linear-gradient(180deg,rgba(10,27,52,0.9),rgba(7,21,44,0.96))] shadow-[0_38px_110px_rgba(2,8,20,0.28)]">
-            <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-              <div className="p-6 sm:p-8 lg:p-10 xl:p-12">
-                <span className="section-label text-white/62">{copy.impact.eyebrow}</span>
-                <h2 className="mt-6 max-w-[12ch] font-display text-[2.1rem] font-semibold leading-[0.96] text-white sm:text-[2.9rem] lg:text-[3.5rem]">
-                  {copy.impact.title}
-                </h2>
-                <p className="mt-6 max-w-2xl text-[0.98rem] leading-7 text-white/72 sm:text-[1.04rem] sm:leading-8">
-                  {copy.impact.description}
-                </p>
+        <div className="grid gap-10 xl:grid-cols-[minmax(0,0.84fr)_minmax(0,1.16fr)] xl:items-start">
+          <Reveal className="xl:sticky xl:top-28">
+            <span className="section-label text-white/62">{copy.impact.eyebrow}</span>
+            <h2 className="mt-6 max-w-[11ch] font-display text-[2rem] font-semibold leading-[0.94] text-white sm:text-[3rem] lg:text-[3.8rem]">
+              {copy.impact.title}
+            </h2>
+            <p className="mt-5 max-w-[52ch] text-[0.96rem] leading-7 text-white/72 sm:text-[1.06rem] sm:leading-8">
+              {copy.impact.description}
+            </p>
 
-                <blockquote className="mt-10 border-l-2 border-[var(--color-orbit)] pl-5 text-[1.4rem] font-semibold leading-8 text-white sm:pl-6 sm:text-[1.85rem] sm:leading-9">
-                  {copy.impact.quote}
-                </blockquote>
-              </div>
+            <blockquote className="mt-8 max-w-[14ch] border-l-2 border-[var(--color-orbit)] pl-4 font-display text-[1.45rem] font-semibold leading-[1.04] text-white sm:mt-10 sm:pl-6 sm:text-[2.35rem]">
+              {copy.impact.quote}
+            </blockquote>
 
-              <div className="border-t border-white/10 lg:border-l lg:border-t-0">
-                {copy.impact.benefits.map((benefit, index) => (
-                  <div
-                    key={benefit.title}
-                    className={`grid gap-4 px-6 py-6 sm:grid-cols-[72px_minmax(0,1fr)] sm:px-8 lg:px-10 ${
-                      index > 0 ? "border-t border-white/10" : ""
-                    }`}
-                  >
-                    <div className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/38 sm:text-xs sm:pt-1">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
-                    <div>
-                      <h3 className="text-[1.08rem] font-semibold text-white sm:text-[1.35rem]">
-                        {benefit.title}
-                      </h3>
-                      <p className="mt-3 text-sm leading-7 text-white/68 sm:text-[0.98rem] sm:leading-8">
-                        {benefit.copy}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="border-t border-white/10 px-6 py-6 sm:px-8 lg:px-10">
-              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white/42 sm:text-xs">
+            <div className="mt-8 border-t border-white/10 pt-5 sm:mt-10 sm:pt-6">
+              <p className="text-[0.66rem] font-semibold uppercase tracking-[0.22em] text-white/42 sm:text-xs">
                 {copy.impact.extraTitle}
               </p>
-              <div className="mt-4 flex flex-wrap gap-3">
+              <div className="mt-4 flex flex-wrap gap-2.5">
                 {copy.impact.extras.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/56"
+                    className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-white/56"
                   >
                     {item}
                   </span>
                 ))}
               </div>
             </div>
+          </Reveal>
+
+          <div className="border-t border-white/10">
+            {copy.impact.benefits.map((benefit, index) => (
+              <Reveal key={benefit.title} delay={0.08 * index}>
+                <article className="grid gap-3 border-b border-white/10 py-5 sm:grid-cols-[88px_minmax(0,1fr)] sm:gap-8 sm:py-8">
+                  <div className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/36 sm:pt-1">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <div>
+                    <h3 className="text-[1rem] font-semibold text-white sm:text-[1.5rem]">
+                      {benefit.title}
+                    </h3>
+                    <p className="mt-3 max-w-[54ch] text-[0.9rem] leading-6 text-white/66 sm:mt-4 sm:text-[1rem] sm:leading-8">
+                      {benefit.copy}
+                    </p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
+        </div>
       </Container>
     </section>
   );

@@ -33,9 +33,9 @@ const translations = {
     },
     hero: {
       eyebrow: "PRIORITY Freight Intelligence",
-      title: "No solo movemos carga. Diseñamos decisiones logísticas más inteligentes.",
+      title: "Diseñamos decisiones logísticas con criterio.",
       description:
-        "Combinamos experiencia humana, análisis operativo y ejecución multimodal para que importadores, exportadores y equipos de supply chain operen con más claridad, mejor criterio y una red más confiable.",
+        "PRIORITY acompaña operaciones entre México, Estados Unidos y Canadá con asesoría real, ejecución multimodal y seguimiento cercano para que cada embarque se tome con más claridad y mejor criterio.",
       primaryCta: "Hablar con un asesor",
       secondaryCta: "Ver presentación",
       tagline: "SMARTER • BETTER • FASTER",
@@ -103,9 +103,9 @@ const translations = {
     },
     services: {
       eyebrow: "Portafolio principal",
-      title: "Servicios principales construidos para operar con claridad.",
+      title: "Servicios principales para operar con claridad.",
       description:
-        "Las fichas visuales ya muestran el detalle operativo. Aquí usamos la imagen como protagonista para que el portafolio se entienda de un vistazo.",
+        "El portafolio se presenta de forma visual para que cada solución se entienda rápido y con una lectura más ejecutiva.",
       sheetLabel: "Ficha visual",
       carouselLabel: "Carrusel de servicios",
       previous: "Anterior",
@@ -267,7 +267,7 @@ const translations = {
     },
     cta: {
       eyebrow: "Contacto",
-      title: "Hablemos de tu operación y propongamos la mejor solución.",
+      title: "Hablemos de tu operación y diseñemos la mejor solución.",
       description:
         "Si tu empresa necesita más visibilidad, mejor acompañamiento y decisiones logísticas más inteligentes, PRIORITY está listo para ayudarte.",
       connectLine:
@@ -315,9 +315,9 @@ const translations = {
     },
     hero: {
       eyebrow: "PRIORITY Freight Intelligence",
-      title: "We do more than move freight. We design smarter logistics decisions.",
+      title: "We design logistics decisions with better judgment.",
       description:
-        "We combine human expertise, operational analysis and multimodal execution so importers, exporters and supply chain teams can operate with more clarity, better judgment and a more reliable network.",
+        "PRIORITY supports operations across Mexico, the United States and Canada with real advisory, multimodal execution and close follow-through so every shipment is handled with greater clarity and stronger judgment.",
       primaryCta: "Talk to an advisor",
       secondaryCta: "View presentation",
       tagline: "SMARTER • BETTER • FASTER",
@@ -385,9 +385,9 @@ const translations = {
     },
     services: {
       eyebrow: "Core portfolio",
-      title: "Core services built for clarity and execution.",
+      title: "Core services built for clarity.",
       description:
-        "The visual sheets already carry the operational detail. Here the image leads so the portfolio is understood at a glance.",
+        "The portfolio is presented visually so each solution reads quickly and feels more executive from the first glance.",
       sheetLabel: "Visual sheet",
       carouselLabel: "Services carousel",
       previous: "Previous",
@@ -548,7 +548,7 @@ const translations = {
     },
     cta: {
       eyebrow: "Contact",
-      title: "Let’s review your operation and propose the right solution.",
+      title: "Let’s review your operation and design the right solution.",
       description:
         "If your business needs better visibility, stronger follow-through and smarter logistics decisions, PRIORITY is ready to help.",
       connectLine:

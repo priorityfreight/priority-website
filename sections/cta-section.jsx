@@ -30,75 +30,84 @@ export function CTASection() {
   ];
 
   return (
-    <section id="contact" className="section-padding relative pt-6">
+    <section id="contact" className="section-padding relative pt-8">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-[linear-gradient(180deg,#0B1F3B_0%,#07152C_100%)] px-5 py-10 shadow-[0_40px_100px_rgba(3,10,24,0.32)] sm:rounded-[40px] sm:px-10 sm:py-14 lg:px-14 lg:py-16">
+          <div className="relative overflow-hidden rounded-[38px] border border-white/10 bg-[linear-gradient(180deg,#0A1E3A_0%,#061326_100%)] px-5 py-10 shadow-[0_40px_100px_rgba(3,10,24,0.28)] sm:px-10 sm:py-14 lg:px-14 lg:py-16">
             <div className="absolute inset-0 bg-brand-grid opacity-30" />
             <div className="absolute right-[-120px] top-[-120px] h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(179,58,91,0.36),transparent_68%)]" />
-            <div className="relative z-10 grid gap-7 sm:gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+            <div className="relative z-10 grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start">
               <div>
                 <p className="section-label text-white/62">{copy.cta.eyebrow}</p>
-                <h2 className="mt-4 max-w-[12ch] font-display text-4xl font-semibold leading-[0.96] text-white sm:mt-5 sm:text-6xl">
+                <h2 className="mt-4 max-w-[11ch] font-display text-[2.35rem] font-semibold leading-[0.94] text-white sm:mt-5 sm:text-[3.8rem]">
                   {copy.cta.title}
                 </h2>
-                <p className="mt-5 max-w-2xl text-[0.98rem] leading-7 text-white/72 sm:text-lg sm:leading-8">
+                <p className="mt-5 max-w-[48ch] text-[1rem] leading-7 text-white/72 sm:text-[1.06rem] sm:leading-8">
                   {copy.cta.description}
                 </p>
-                <p className="mt-4 max-w-2xl text-sm leading-7 text-white/58 sm:text-base">
+                <p className="mt-4 max-w-[46ch] text-[0.96rem] leading-7 text-white/56 sm:text-[1rem]">
                   {copy.cta.connectLine}
                 </p>
               </div>
 
-              <div className="flex flex-col gap-3 sm:gap-4 sm:flex-row lg:flex-col lg:items-end">
-                <PriorityLogo
-                  layout="vertical"
-                  className="hidden lg:flex lg:self-end"
-                  subtitle={copy.brandSubtitle}
-                />
-                <Button
-                  href={contacts[0].whatsappHref}
-                  className="w-full sm:min-w-[220px] sm:w-auto"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {copy.cta.whatsapp} {copy.cta.sales}
-                </Button>
-                <Button href="/presentacion" variant="secondary" className="w-full sm:min-w-[220px] sm:w-auto">
-                  {copy.cta.presentation}
-                </Button>
-                <Button
-                  href="#home"
-                  variant="secondary"
-                  className="hidden w-full sm:inline-flex sm:min-w-[220px] sm:w-auto"
-                >
-                  {copy.cta.secondary}
-                </Button>
+              <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-5 backdrop-blur sm:p-6 lg:ml-auto lg:max-w-[420px]">
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <p className="text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-white/40">
+                      PRIORITY
+                    </p>
+                    <p className="mt-3 max-w-[20ch] font-display text-[1.45rem] font-semibold leading-tight text-white">
+                      Atención comercial y operativa con respuesta directa.
+                    </p>
+                  </div>
+                  <PriorityLogo showWordmark={false} className="opacity-95" />
+                </div>
+
+                <div className="mt-6 grid gap-3">
+                  <Button
+                    href={contacts[0].whatsappHref}
+                    className="w-full"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {copy.cta.whatsapp} {copy.cta.sales}
+                  </Button>
+                  <Button href="/presentacion" variant="secondary" className="w-full">
+                    {copy.cta.presentation}
+                  </Button>
+                  <Button
+                    href="#home"
+                    variant="secondary"
+                    className="w-full"
+                  >
+                    {copy.cta.secondary}
+                  </Button>
+                </div>
               </div>
             </div>
 
-            <div className="relative z-10 mt-8 grid gap-4 border-t border-white/10 pt-8 sm:mt-10 sm:gap-5 lg:grid-cols-2">
+            <div className="relative z-10 mt-8 grid gap-0 border-t border-white/10 pt-8 lg:grid-cols-2">
               {contacts.map((contact) => (
                 <div
                   key={contact.title}
-                  className="rounded-[24px] border border-white/10 bg-white/[0.04] p-5 backdrop-blur sm:rounded-[28px] sm:p-6"
+                  className="border-white/10 py-6 lg:px-6 lg:first:pl-0 lg:last:border-l lg:last:pr-0"
                 >
-                  <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/45 sm:text-xs sm:tracking-[0.32em]">
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-white/42 sm:text-xs sm:tracking-[0.32em]">
                         {contact.title}
                       </p>
                       <a
                         href={contact.phoneHref}
-                        className="mt-3 block text-xl font-semibold leading-8 text-white transition hover:text-white/84 sm:text-2xl"
+                        className="mt-3 block font-display text-[1.45rem] font-semibold leading-tight text-white transition-[color] duration-200 hover:text-white/84 sm:text-[1.9rem]"
                       >
                         {contact.phone}
                       </a>
                     </div>
-                    <PriorityLogo showWordmark={false} className="opacity-95" />
+                    <PriorityLogo showWordmark={false} className="opacity-80" />
                   </div>
 
-                  <div className="mt-5 space-y-3 text-sm text-white/72">
+                  <div className="mt-5 space-y-3 text-sm text-white/72 sm:text-[0.98rem]">
                     <p>
                       <span className="mr-2 text-white/46">{copy.cta.phoneLabel}</span>
                       <a href={contact.phoneHref} className="transition hover:text-white">
@@ -113,31 +122,24 @@ export function CTASection() {
                     </p>
                   </div>
 
-                  <div className="mt-6 grid gap-3 sm:flex sm:flex-wrap">
-                    <Button href={contact.phoneHref} variant="light" className="w-full sm:w-auto">
+                  <div className="mt-6 flex flex-wrap gap-3 text-[0.76rem] font-semibold uppercase tracking-[0.12em] text-white/58">
+                    <a href={contact.phoneHref} className="rounded-full border border-white/10 px-4 py-2 transition-[background-color,color] duration-200 hover:bg-white/[0.05] hover:text-white">
                       {copy.cta.phoneLabel}
-                    </Button>
-                    <Button href={contact.emailHref} variant="secondary" className="w-full sm:w-auto">
+                    </a>
+                    <a href={contact.emailHref} className="rounded-full border border-white/10 px-4 py-2 transition-[background-color,color] duration-200 hover:bg-white/[0.05] hover:text-white">
                       {copy.cta.emailLabel}
-                    </Button>
-                    <Button
+                    </a>
+                    <a
                       href={contact.whatsappHref}
-                      variant="secondary"
-                      className="w-full sm:w-auto"
+                      className="rounded-full border border-white/10 px-4 py-2 transition-[background-color,color] duration-200 hover:bg-white/[0.05] hover:text-white"
                       target="_blank"
                       rel="noreferrer"
                     >
                       {copy.cta.whatsapp}
-                    </Button>
+                    </a>
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="relative z-10 mt-6 sm:hidden">
-              <Button href="#home" variant="secondary" className="w-full">
-                {copy.cta.secondary}
-              </Button>
             </div>
           </div>
         </Reveal>

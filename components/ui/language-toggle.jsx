@@ -21,7 +21,7 @@ export function LanguageToggle({ className = "" }) {
             key={option.code}
             type="button"
             onClick={() => setLanguage(option.code)}
-            className={`min-w-11 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] transition ${
+            className={`min-w-11 rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] transition-[background-color,color,transform] duration-200 ease-out focus-visible:outline-none ${
               active
                 ? "bg-white/14 text-white"
                 : "text-white/62 hover:text-white"
