@@ -18,14 +18,14 @@ export function ImpactSection() {
             <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
               <div className="p-6 sm:p-8 lg:p-10 xl:p-12">
                 <span className="section-label text-white/62">{copy.impact.eyebrow}</span>
-                <h2 className="mt-6 max-w-[12ch] font-display text-4xl font-semibold leading-[0.96] text-white sm:text-5xl lg:text-6xl">
+                <h2 className="mt-6 max-w-[12ch] font-display text-[2.1rem] font-semibold leading-[0.96] text-white sm:text-[2.9rem] lg:text-[3.5rem]">
                   {copy.impact.title}
                 </h2>
-                <p className="mt-6 max-w-2xl text-base leading-8 text-white/72 sm:text-lg sm:leading-9">
+                <p className="mt-6 max-w-2xl text-[0.98rem] leading-7 text-white/72 sm:text-[1.04rem] sm:leading-8">
                   {copy.impact.description}
                 </p>
 
-                <blockquote className="mt-10 border-l-2 border-[var(--color-orbit)] pl-5 text-2xl font-semibold leading-9 text-white sm:pl-6 sm:text-3xl sm:leading-10">
+                <blockquote className="mt-10 border-l-2 border-[var(--color-orbit)] pl-5 text-[1.4rem] font-semibold leading-8 text-white sm:pl-6 sm:text-[1.85rem] sm:leading-9">
                   {copy.impact.quote}
                 </blockquote>
               </div>
@@ -42,10 +42,10 @@ export function ImpactSection() {
                       {String(index + 1).padStart(2, "0")}
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white sm:text-2xl">
+                      <h3 className="text-[1.08rem] font-semibold text-white sm:text-[1.35rem]">
                         {benefit.title}
                       </h3>
-                      <p className="mt-3 text-sm leading-7 text-white/68 sm:text-base sm:leading-8">
+                      <p className="mt-3 text-sm leading-7 text-white/68 sm:text-[0.98rem] sm:leading-8">
                         {benefit.copy}
                       </p>
                     </div>

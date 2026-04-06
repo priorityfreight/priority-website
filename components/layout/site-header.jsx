@@ -33,16 +33,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 pt-3 sm:pt-4">
       <Container>
-        <div className="relative flex items-center justify-between rounded-[28px] border border-white/12 bg-[rgba(7,21,44,0.78)] px-3 py-2.5 shadow-[0_20px_50px_rgba(2,8,20,0.28)] backdrop-blur-xl sm:rounded-full sm:px-5 sm:py-3">
-          <Link href="#home" className="relative z-10 origin-left max-[360px]:scale-[0.9]">
+        <div className="relative flex items-center justify-between rounded-[28px] border border-white/12 bg-[rgba(7,21,44,0.8)] px-3 py-2.5 shadow-[0_20px_50px_rgba(2,8,20,0.28)] backdrop-blur-xl sm:rounded-full sm:px-5 sm:py-3 lg:grid lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:items-center lg:gap-6 xl:gap-8">
+          <Link
+            href="#home"
+            className="relative z-10 origin-left max-[360px]:scale-[0.9] lg:scale-[0.88] xl:scale-[0.94] 2xl:scale-100"
+          >
             <PriorityLogo subtitle={copy.brandSubtitle} />
           </Link>
 
-          <div className="flex items-center gap-2 sm:gap-3">
-            <div className="hidden lg:block">
-              <LanguageToggle />
-            </div>
-
+          <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
             <button
               type="button"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white lg:hidden sm:h-11 sm:w-11"
@@ -58,21 +57,26 @@ export function SiteHeader() {
             </button>
           </div>
 
-          <nav className="hidden items-center gap-5 xl:gap-7 lg:flex">
+          <nav className="hidden min-w-0 items-center justify-center gap-3 lg:flex xl:gap-5">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[0.92rem] text-white/75 transition hover:text-white xl:text-sm"
+                className="whitespace-nowrap text-[0.84rem] text-white/72 transition hover:text-white xl:text-[0.92rem]"
               >
                 {item.href === "/presentacion" ? copy.nav.presentationShort : item.label}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden lg:block">
-            <Button href="#contact" variant="secondary">
-              {copy.nav.quote}
+          <div className="hidden items-center gap-2 lg:flex xl:gap-3">
+            <LanguageToggle />
+            <Button variant="secondary" className="min-h-10 px-4 text-[0.76rem] xl:px-5 xl:text-[0.8rem]">
+              {copy.nav.login}
+            </Button>
+            <Button href="#contact" className="min-h-10 px-4 text-[0.76rem] xl:px-5 xl:text-[0.8rem]">
+              <span className="xl:hidden">{copy.nav.quoteShort}</span>
+              <span className="hidden xl:inline">{copy.nav.quote}</span>
             </Button>
           </div>
 
@@ -105,14 +109,14 @@ export function SiteHeader() {
                     {item.label}
                   </Link>
                 ))}
-                <Button
-                  href="#contact"
-                  variant="secondary"
-                  className="mt-2 w-full"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {copy.nav.quote}
-                </Button>
+                <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                  <Button variant="secondary" className="w-full" onClick={() => setIsOpen(false)}>
+                    {copy.nav.login}
+                  </Button>
+                  <Button href="#contact" className="w-full" onClick={() => setIsOpen(false)}>
+                    {copy.nav.quote}
+                  </Button>
+                </div>
               </nav>
             </div>
           </div>

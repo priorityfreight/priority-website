@@ -26,7 +26,9 @@ const translations = {
       presentation: "Presentacion de servicios",
       presentationShort: "Presentacion",
       contact: "Contacto",
+      login: "LOGIN",
       quote: "Solicitar cotización",
+      quoteShort: "Cotizar",
       toggle: "Abrir navegación",
     },
     hero: {
@@ -52,14 +54,18 @@ const translations = {
         },
       ],
       visualKicker: "Freight Intelligence Layer",
-      visualNoteLabel: "Punto de vista",
-      visualNote:
-        "Una operación internacional necesita criterio, servicio y timing. PRIORITY trabaja como una extensión del equipo del cliente.",
+      visualFocusLabel: "Cobertura foco",
+      visualFocusValue: "MEX • USA • CAN",
       visualLabels: ["Ocean", "Ground", "Air"],
       proofs: [
         { label: "Cobertura foco", value: "MEX • USA • CAN" },
         { label: "Modelo", value: "Asesoría antes de vender" },
         { label: "Seguimiento", value: "Personalizado y continuo" },
+      ],
+      visualSignals: [
+        "Advisory first",
+        "Multimodal execution",
+        "Operational continuity",
       ],
     },
     positioning: {
@@ -97,9 +103,9 @@ const translations = {
     },
     services: {
       eyebrow: "Portafolio principal",
-      title: "Servicios construidos como solución, no solo como transporte.",
+      title: "Servicios principales construidos para operar con claridad.",
       description:
-        "Cada servicio se presenta con enfoque comercial y operativo para explicar con claridad dónde genera valor y cuándo conviene utilizarlo.",
+        "Las fichas visuales ya muestran el detalle operativo. Aquí usamos la imagen como protagonista para que el portafolio se entienda de un vistazo.",
       sheetLabel: "Ficha visual",
       carouselLabel: "Carrusel de servicios",
       previous: "Anterior",
@@ -111,6 +117,28 @@ const translations = {
       regionLabel: "Cobertura",
       solutionLabel: "Solución consultiva",
       monitoringLabel: "Seguimiento cercano",
+      additionalEyebrow: "Servicios adicionales",
+      additionalTitle: "Valor agregado que va más allá del transporte.",
+      additionalDescription:
+        "Además del movimiento principal de carga, PRIORITY ofrece servicios complementarios para proteger la operación, capacitar al cliente y fortalecer decisiones futuras.",
+      additionalItems: [
+        {
+          title: "Seguro de carga",
+          copy: "Cobertura adicional para embarques sensibles o de alto valor donde la gestión del riesgo es crítica.",
+        },
+        {
+          title: "Capacitaciones gratuitas",
+          copy: "Entrenamiento práctico para el personal del cliente en temas de operación, transporte y mejores criterios logísticos.",
+        },
+        {
+          title: "Búsqueda de proveedores",
+          copy: "Apoyo estratégico para identificar nuevos proveedores por fracción arancelaria y fortalecer la cadena de suministro.",
+        },
+        {
+          title: "Soporte estratégico continuo",
+          copy: "Seguimiento cercano, resolución de dudas y acompañamiento operativo más allá de una sola cotización o embarque.",
+        },
+      ],
       items: [
         {
           code: "LCL",
@@ -203,12 +231,6 @@ const translations = {
           copy: "Capacitamos, asesoramos y detectamos oportunidades para que la siguiente operación sea más eficiente que la anterior.",
         },
       ],
-      extraServices: [
-        "Seguro de carga",
-        "Capacitaciones gratuitas",
-        "Búsqueda de proveedores por fracción arancelaria",
-        "Soporte estratégico continuo",
-      ],
     },
     impact: {
       eyebrow: "Beneficios para el cliente",
@@ -286,7 +308,9 @@ const translations = {
       presentation: "Services Presentation",
       presentationShort: "Presentation",
       contact: "Contact",
+      login: "LOGIN",
       quote: "Request Quote",
+      quoteShort: "Quote",
       toggle: "Toggle navigation",
     },
     hero: {
@@ -312,14 +336,18 @@ const translations = {
         },
       ],
       visualKicker: "Freight Intelligence Layer",
-      visualNoteLabel: "Point of view",
-      visualNote:
-        "An international operation needs judgment, service and timing. PRIORITY works like an extension of the client team.",
+      visualFocusLabel: "Core coverage",
+      visualFocusValue: "MEX • USA • CAN",
       visualLabels: ["Ocean", "Ground", "Air"],
       proofs: [
         { label: "Core coverage", value: "MEX • USA • CAN" },
         { label: "Model", value: "Advise before selling" },
         { label: "Follow-up", value: "Personalized and continuous" },
+      ],
+      visualSignals: [
+        "Advisory first",
+        "Multimodal execution",
+        "Operational continuity",
       ],
     },
     positioning: {
@@ -357,9 +385,9 @@ const translations = {
     },
     services: {
       eyebrow: "Core portfolio",
-      title: "Services built as solutions, not just transportation modes.",
+      title: "Core services built for clarity and execution.",
       description:
-        "Each service is framed from both a commercial and operational perspective so teams can quickly understand where it creates value and when it makes sense to use it.",
+        "The visual sheets already carry the operational detail. Here the image leads so the portfolio is understood at a glance.",
       sheetLabel: "Visual sheet",
       carouselLabel: "Services carousel",
       previous: "Previous",
@@ -371,6 +399,28 @@ const translations = {
       regionLabel: "Coverage",
       solutionLabel: "Consultative solution",
       monitoringLabel: "Close follow-up",
+      additionalEyebrow: "Additional services",
+      additionalTitle: "Added value beyond the core shipment.",
+      additionalDescription:
+        "Beyond the main freight move, PRIORITY also offers complementary services that protect the operation, train the client team and support better decisions over time.",
+      additionalItems: [
+        {
+          title: "Cargo insurance",
+          copy: "Additional protection for sensitive or higher-value shipments where risk management matters.",
+        },
+        {
+          title: "Free training",
+          copy: "Practical training for client teams around transport, operations and stronger logistics decision-making.",
+        },
+        {
+          title: "Supplier sourcing support",
+          copy: "Strategic help identifying new suppliers by tariff classification to strengthen the supply chain.",
+        },
+        {
+          title: "Ongoing strategic support",
+          copy: "Close follow-up, question resolution and operating guidance beyond a single quote or shipment.",
+        },
+      ],
       items: [
         {
           code: "LCL",
@@ -462,12 +512,6 @@ const translations = {
           title: "We bring continuous improvement",
           copy: "We train, advise and surface new opportunities so the next shipment runs better than the last one.",
         },
-      ],
-      extraServices: [
-        "Cargo insurance",
-        "Free training",
-        "Tariff-based supplier sourcing",
-        "Strategic ongoing support",
       ],
     },
     impact: {

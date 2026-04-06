@@ -13,13 +13,13 @@ export function MethodologySection() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)]">
           <Reveal>
             <span className="section-label text-white/62">{copy.methodology.eyebrow}</span>
-            <h2 className="mt-6 max-w-[13ch] font-display text-4xl font-semibold leading-[0.96] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="mt-6 max-w-[13ch] font-display text-[2.05rem] font-semibold leading-[0.98] text-white sm:text-[2.8rem] lg:text-[3.3rem]">
               {copy.methodology.title}
             </h2>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/72 sm:text-lg sm:leading-9">
+            <p className="mt-6 max-w-2xl text-[0.94rem] leading-7 text-white/72 sm:text-[0.98rem] sm:leading-8">
               {copy.methodology.description}
             </p>
-            <p className="mt-6 max-w-xl text-base leading-8 text-white/54 sm:text-lg">
+            <p className="mt-5 max-w-xl text-[0.92rem] leading-7 text-white/56 sm:text-[0.98rem] sm:leading-8">
               {copy.methodology.note}
             </p>
 
@@ -55,10 +55,10 @@ export function MethodologySection() {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl font-semibold text-white sm:text-3xl">
+                  <h3 className="text-[1.08rem] font-semibold text-white sm:text-[1.42rem]">
                     {step.title}
                   </h3>
-                  <p className="mt-4 max-w-3xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
+                  <p className="mt-4 max-w-3xl text-sm leading-7 text-white/70 sm:text-[0.98rem] sm:leading-8">
                     {step.copy}
                   </p>
                 </article>
@@ -66,19 +66,6 @@ export function MethodologySection() {
             ))}
           </div>
         </div>
-
-        <Reveal delay={0.24}>
-          <div className="mt-10 flex flex-wrap gap-3">
-            {copy.methodology.extraServices.map((service) => (
-              <span
-                key={service}
-                className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-white/56"
-              >
-                {service}
-              </span>
-            ))}
-          </div>
-        </Reveal>
       </Container>
     </section>
   );

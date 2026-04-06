@@ -13,16 +13,16 @@ export function PositioningSection() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-start">
           <Reveal>
             <span className="section-label text-white/62">{copy.positioning.eyebrow}</span>
-            <h2 className="mt-6 max-w-[12ch] font-display text-4xl font-semibold leading-[0.96] text-white sm:text-5xl lg:text-6xl">
+            <h2 className="mt-6 max-w-[12ch] font-display text-[2.1rem] font-semibold leading-[0.96] text-white sm:text-[2.9rem] lg:text-[3.5rem]">
               {copy.positioning.title}
             </h2>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/72 sm:text-lg sm:leading-9">
+            <p className="mt-6 max-w-2xl text-[0.98rem] leading-7 text-white/72 sm:text-[1.04rem] sm:leading-8">
               {copy.positioning.intro}
             </p>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/62 sm:text-lg sm:leading-9">
+            <p className="mt-6 max-w-2xl text-[0.98rem] leading-7 text-white/62 sm:text-[1.04rem] sm:leading-8">
               {copy.positioning.body}
             </p>
-            <p className="mt-8 max-w-xl text-2xl font-semibold leading-tight text-white sm:text-3xl">
+            <p className="mt-8 max-w-xl text-[1.4rem] font-semibold leading-tight text-white sm:text-[1.75rem]">
               {copy.positioning.highlight}
             </p>
 
@@ -65,7 +65,7 @@ export function PositioningSection() {
               </div>
 
               <div className="border-t border-white/10 px-6 py-6 sm:px-8">
-                <p className="max-w-3xl text-xl font-semibold leading-9 text-white sm:text-2xl sm:leading-10">
+                <p className="max-w-3xl text-[1.18rem] font-semibold leading-8 text-white sm:text-[1.45rem] sm:leading-9">
                   {copy.positioning.comparison.quote}
                 </p>
               </div>

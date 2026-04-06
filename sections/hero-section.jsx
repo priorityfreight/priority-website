@@ -18,15 +18,15 @@ export function HeroSection() {
           <div className="absolute inset-0 bg-brand-grid opacity-35" />
           <div className="absolute inset-y-0 right-0 w-[46%] bg-[radial-gradient(circle_at_center,rgba(179,58,91,0.2),transparent_62%)]" />
 
-          <div className="relative grid min-h-[calc(100svh-6.5rem)] items-center gap-10 px-5 py-8 sm:min-h-[calc(100svh-7.5rem)] sm:px-8 sm:py-10 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:px-14 lg:py-14 xl:px-16">
+          <div className="relative grid items-center gap-8 px-5 py-8 sm:px-8 sm:py-10 lg:min-h-[calc(100svh-9rem)] lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-10 lg:px-14 lg:py-12 xl:px-16">
             <Reveal className="relative z-10 max-w-3xl">
-              <PriorityLogo className="mb-8 sm:mb-10" subtitle={copy.brandSubtitle} />
+              <PriorityLogo className="mb-7 sm:mb-9" subtitle={copy.brandSubtitle} />
               <span className="section-label text-white/62">{copy.hero.eyebrow}</span>
 
-              <h1 className="text-shadow-soft mt-6 max-w-[11ch] font-display text-5xl font-semibold leading-[0.92] text-white sm:text-6xl lg:text-7xl xl:text-[5.5rem]">
+              <h1 className="text-shadow-soft mt-6 max-w-[10ch] font-display text-[2.35rem] font-semibold leading-[0.92] text-white sm:text-[3.75rem] lg:text-[4.25rem] xl:text-[4.7rem]">
                 {copy.hero.title}
               </h1>
-              <p className="mt-6 max-w-2xl text-balance text-base leading-8 text-white/74 sm:text-lg sm:leading-8">
+              <p className="mt-5 max-w-[57ch] text-balance text-[0.94rem] leading-7 text-white/72 sm:mt-6 sm:text-[1rem] sm:leading-8">
                 {copy.hero.description}
               </p>
 
@@ -43,14 +43,14 @@ export function HeroSection() {
                 {copy.hero.tagline}
               </p>
 
-              <div className="mt-8 grid gap-4 border-t border-white/10 pt-8 sm:mt-10 sm:grid-cols-3">
+              <div className="mt-8 grid gap-4 border-t border-white/10 pt-6 sm:mt-9 sm:grid-cols-3">
                 {copy.hero.signals.map((signal, index) => (
                   <Reveal key={signal.title} delay={0.08 * (index + 1)}>
                     <div className="h-full">
-                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/48">
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-white/48 sm:text-[0.78rem] sm:tracking-[0.18em]">
                         {signal.title}
                       </p>
-                      <p className="mt-3 text-sm leading-7 text-white/72 sm:text-[0.98rem]">
+                      <p className="mt-3 text-[0.88rem] leading-6 text-white/68 sm:text-[0.94rem] sm:leading-7">
                         {signal.copy}
                       </p>
                     </div>
@@ -59,7 +59,7 @@ export function HeroSection() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.12} className="relative z-10 lg:pl-6">
+            <Reveal delay={0.12} className="relative z-10 lg:pl-2">
               <HeroNetwork />
             </Reveal>
           </div>

@@ -21,12 +21,12 @@ export function SectionHeading({
     <div className={`flex flex-col gap-5 ${alignment} ${className}`}>
       <span className={`section-label ${copyTone}`}>{eyebrow}</span>
       <h2
-        className={`text-balance text-3xl font-semibold leading-[1.02] sm:text-5xl ${tone}`}
+        className={`text-balance font-display text-[2.05rem] font-semibold leading-[0.98] sm:text-[2.85rem] lg:text-[3.2rem] ${tone}`}
       >
         {title}
       </h2>
       {description ? (
-        <p className={`text-balance text-base leading-8 sm:text-lg ${copyTone}`}>
+        <p className={`max-w-[58ch] text-balance text-[0.94rem] leading-7 sm:text-[0.98rem] sm:leading-8 ${copyTone}`}>
           {description}
         </p>
       ) : null}
